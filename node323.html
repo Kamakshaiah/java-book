@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Performing single task by multiple threads</TITLE>
+<META NAME="description" CONTENT="Performing single task by multiple threads">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node324.html">
+<LINK REL="previous" HREF="node322.html">
+<LINK REL="next" HREF="node324.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node324.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node322.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1934"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node324.html">Performing multiple tasks by</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node322.html">Java Shutdown Hook</A>
+ &nbsp; <B>  <A ID="tex2html1935"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION009314000000000000000">
+Performing single task by multiple threads</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">If you have to perform single task by many threads, have only one <SPAN  CLASS="texttt">run()</SPAN> method. For example: 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img605.svg"
+ ALT="\begin{lstlisting}
+class TestMultitasking1 extends Thread{
+public void run(){ ...
+...sking1();
+\par
+t1.start();
+t2.start();
+t3.start();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img606.svg"
+ ALT="\begin{lstlisting}
+Output:task one
+task one
+task one
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Program of performing single task by multiple threads
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img607.svg"
+ ALT="\begin{lstlisting}
+lass TestMultitasking2 implements Runnable{
+public void run(...
+...estMultitasking2());
+\par
+t1.start();
+t2.start();
+\par
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img608.svg"
+ ALT="\begin{lstlisting}
+Output:task one
+task one
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

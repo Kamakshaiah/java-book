@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>The join() method</TITLE>
+<META NAME="description" CONTENT="The join() method">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node314.html">
+<LINK REL="previous" HREF="node312.html">
+<LINK REL="next" HREF="node314.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node314.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node312.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1913"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node314.html">getName(),setName(String) and getId() method:</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node312.html">Sleep method in java</A>
+ &nbsp; <B>  <A ID="tex2html1914"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00935000000000000000">
+The <SPAN  CLASS="texttt">join()</SPAN> method</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The <SPAN  CLASS="texttt">join()</SPAN> method waits for a thread to die. In other words, it causes the currently running threads to stop executing until the thread it joins with completes its task.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Syntax:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img572.svg"
+ ALT="\begin{lstlisting}
+public void join()throws InterruptedException
+public void join(long milliseconds)throws InterruptedException
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Example
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img573.svg"
+ ALT="\begin{lstlisting}
+class TestJoinMethod1 extends Thread{
+public void run(){
+...
+...System.out.println(e);}
+\par
+t2.start();
+t3.start();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Test it Now
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img574.svg"
+ ALT="\begin{lstlisting}
+Output:1
+2
+3
+4
+5
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">As you can see in the above example,when t1 completes its task then t2 and t3 starts executing. Following is the program that serves as an example of join(long miliseconds) method. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img575.svg"
+ ALT="\begin{lstlisting}
+lass TestJoinMethod2 extends Thread{
+public void run(){
+f...
+...System.out.println(e);}
+\par
+t2.start();
+t3.start();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Test it Now
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img576.svg"
+ ALT="\begin{lstlisting}
+Output:1
+2
+3
+1
+4
+1
+2
+5
+2
+3
+3
+4
+4
+5
+5
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">In the above example,when t1 is completes its task for 1500 miliseconds(3 times) then t2 and t3 starts executing.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

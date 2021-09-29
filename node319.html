@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Daemon Thread in Java</TITLE>
+<META NAME="description" CONTENT="Daemon Thread in Java">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node320.html">
+<LINK REL="previous" HREF="node318.html">
+<LINK REL="next" HREF="node320.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node320.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node318.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1926"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node320.html">Java Thread Pool</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node318.html">Priority of a Thread</A>
+ &nbsp; <B>  <A ID="tex2html1927"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION009310000000000000000">
+Daemon Thread in Java</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Daemon thread in java is a service provider thread that provides services to the user thread. Its life depend on the mercy of user threads i.e. when all the user threads dies, JVM terminates this thread automatically. There are many java daemon threads running automatically e.g. gc, finalizer etc. You can see all the detail by typing the jconsole in the command prompt. The jconsole tool provides information about the loaded classes, memory usage, running threads etc.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Daemon thread provides services to user threads for background supporting tasks. It has no role in life than to serve user threads. Daemon thread's life depends on user threads. Daemon thread is a low priority thread. The sole purpose of the daemon thread is that it provides services to user thread for background supporting task. If there is no user thread, why should JVM keep running this thread. That is why JVM terminates the daemon thread if there is no user thread. The <SPAN  CLASS="texttt">java.lang.Thread</SPAN> class provides two methods for java daemon thread.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><P></P>
+<DIV class="CENTER"><A ID="3644"></A>
+<TABLE>
+<CAPTION><STRONG>Table 6.2:</STRONG>
+Deamon thread</CAPTION>
+<TR><TD>
+<DIV class="CENTER"><TABLE class="PAD  BORDER" style="">
+<TR><TD CLASS="LEFT">No.</TD>
+<TD CLASS="LEFT">Method</TD>
+<TD CLASS="LEFT">Description</TD>
+</TR>
+<TR><TD CLASS="LEFT">1</TD>
+<TD CLASS="LEFT">public void setDaemon(boolean status)</TD>
+<TD CLASS="LEFT">is used to mark the current</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">thread as daemon thread or user thread.</TD>
+</TR>
+<TR><TD CLASS="LEFT">2</TD>
+<TD CLASS="LEFT">public boolean isDaemon()</TD>
+<TD CLASS="LEFT">is used to check that current is daemon.</TD>
+</TR>
+</TABLE>
+
+<A ID=""></A></DIV></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Example <SPAN  CLASS="textit">File: MyThread.java</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img589.svg"
+ ALT="\begin{lstlisting}
+public class TestDaemonThread1 extends Thread{
+public void ...
+....start();//starting threads
+t2.start();
+t3.start();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img590.svg"
+ ALT="\begin{lstlisting}
+daemon thread work
+user thread work
+user thread work
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">If you want to make a user thread as Daemon, it must not be started otherwise it will throw <SPAN  CLASS="texttt">IllegalThreadStateException</SPAN>.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">File: MyThread.java</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img591.svg"
+ ALT="\begin{lstlisting}
+class TestDaemonThread2 extends Thread{
+public void run(){ ...
+...tDaemon(true);//will throw exception here
+t2.start();
+}
+}
+\end{lstlisting}">
+<BR>
+Test it Now
+<BR>
+<IMG STYLE=""
+ SRC="img592.svg"
+ ALT="\begin{lstlisting}
+Output:exception in thread main: java.lang.IllegalThreadStateException
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node320.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node318.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1926"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node320.html">Java Thread Pool</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node318.html">Priority of a Thread</A>
+ &nbsp; <B>  <A ID="tex2html1927"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

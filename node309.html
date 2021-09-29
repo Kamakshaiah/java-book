@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Thread class</TITLE>
+<META NAME="description" CONTENT="Thread class">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node310.html">
+<LINK REL="previous" HREF="node308.html">
+<LINK REL="next" HREF="node310.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node310.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1905"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node310.html">Java Thread Example by</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node308.html">How to create thread</A>
+ &nbsp; <B>  <A ID="tex2html1906"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00931000000000000000">
+Thread class</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Thread class provide constructors and methods to create and perform operations on a thread.Thread class extends Object class and implements Runnable interface. Following are few commonly used Constructors of Thread class:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<UL>
+<LI>Thread()
+</LI>
+<LI>Thread(String name)
+</LI>
+<LI>Thread(Runnable r)
+</LI>
+<LI>Thread(Runnable r,String name)
+</LI>
+</UL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Commonly used methods of Thread class:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<UL>
+<LI>public void run(): is used to perform action for a thread.
+</LI>
+<LI>public void start(): starts the execution of the thread.JVM calls the run() method on the thread.
+</LI>
+<LI>public void sleep(long miliseconds): Causes the currently executing thread to sleep (temporarily cease execution) for the specified number of milliseconds.
+</LI>
+<LI>public void join(): waits for a thread to die.
+</LI>
+<LI>public void join(long miliseconds): waits for a thread to die for the specified miliseconds.
+</LI>
+<LI>public int getPriority(): returns the priority of the thread.
+</LI>
+<LI>public int setPriority(int priority): changes the priority of the thread.
+</LI>
+<LI>public String getName(): returns the name of the thread.
+</LI>
+<LI>public void setName(String name): changes the name of the thread.
+</LI>
+<LI>public Thread currentThread(): returns the reference of currently executing thread.
+</LI>
+<LI>public int getId(): returns the id of the thread.
+</LI>
+<LI>public Thread.State getState(): returns the state of the thread.
+</LI>
+<LI>public boolean isAlive(): tests if the thread is alive.
+</LI>
+<LI>public void yield(): causes the currently executing thread object to temporarily pause and allow other threads to execute.
+</LI>
+<LI>public void suspend(): is used to suspend the thread(depricated).
+</LI>
+<LI>public void resume(): is used to resume the suspended thread(depricated).
+</LI>
+<LI>public void stop(): is used to stop the thread(depricated).
+</LI>
+<LI>public boolean isDaemon(): tests if the thread is a daemon thread.
+</LI>
+<LI>public void setDaemon(boolean b): marks the thread as daemon or user thread.
+</LI>
+<LI>public void interrupt(): interrupts the thread.
+</LI>
+<LI>public boolean isInterrupted(): tests if the thread has been interrupted.
+</LI>
+<LI>public static boolean interrupted(): tests if the current thread has been interrupted.
+
+<P>
+</LI>
+</UL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The Runnable interface should be implemented by any class whose instances are intended to be executed by a thread. Runnable interface have only one method named <SPAN  CLASS="texttt">run()</SPAN> which means <SPAN  CLASS="texttt">public void run()</SPAN> is used to perform action for a thread. <SPAN  CLASS="texttt">start()</SPAN> method of Thread class is used to start a newly created thread. It performs following tasks:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<UL>
+<LI>A new thread starts(with new callstack).
+</LI>
+<LI>The thread moves from New state to the Runnable state.
+</LI>
+<LI>When the thread gets a chance to execute, its target run() method will run.
+
+<P>
+</LI>
+</UL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node310.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1905"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node310.html">Java Thread Example by</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node308.html">How to create thread</A>
+ &nbsp; <B>  <A ID="tex2html1906"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

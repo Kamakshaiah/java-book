@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Java Runtime Polymorphism Example: Bank</TITLE>
+<META NAME="description" CONTENT="Java Runtime Polymorphism Example: Bank">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="previous" HREF="node276.html">
+<LINK REL="next" HREF="node278.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node278.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node275.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node276.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1743"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node278.html">Method Overriding &amp; Overloading</A>
+<B> Up:</B> <A
+ HREF="node275.html">Runtime Polymorphism in Java</A>
+<B> Previous:</B> <A
+ HREF="node276.html">Example of Java Runtime</A>
+ &nbsp; <B>  <A ID="tex2html1744"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION007161200000000000000">
+Java Runtime Polymorphism Example: Bank</A>
+</H3><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Consider a scenario where Bank is a class that provides a method to get the rate of interest. However, the rate of interest may differ according to banks. For example, SBI, ICICI, and AXIS banks are providing 8.4%, 7.3%, and 9.7% rate of interest.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV class="CENTER"><A ID=""></A><A ID="3241"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 4.15:</STRONG>
+Polymorphism example - bank</CAPTION>
+<TR><TD><IMG STYLE=""
+ SRC="./bankinheritance.png"
+ ALT="Image bankinheritance"></TD></TR>
+</TABLE>
+</DIV>
+<SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img521.svg"
+ ALT="\begin{lstlisting}
+class Bank{
+float getRateOfInterest(){return 0;}
+}
+class ...
+...tln(''AXIS Rate of Interest: ''+b.getRateOfInterest());
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img522.svg"
+ ALT="\begin{lstlisting}
+SBI Rate of Interest: 8.4
+ICICI Rate of Interest: 7.3
+AXIS Rate of Interest: 9.7
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Exception occurs in try block and handled in catch block</TITLE>
+<META NAME="description" CONTENT="Exception occurs in try block and handled in catch block">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node301.html">
+<LINK REL="previous" HREF="node299.html">
+<LINK REL="next" HREF="node301.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node301.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node299.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node299.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1828"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node301.html">Control flow in try-catch-finally</A>
+<B> Up:</B> <A
+ HREF="node299.html">Control flow for Exception</A>
+<B> Previous:</B> <A
+ HREF="node299.html">Control flow for Exception</A>
+ &nbsp; <B>  <A ID="tex2html1829"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00851000000000000000">
+Exception occurs in try block and handled in catch block</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">If a statement in try block raised an exception, then the rest of the try block doesn't execute and control passes to the corresponding catch block. After executing the catch block, the control will be transferred to finally block(if present) and then the rest program will be executed. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img557.svg"
+ ALT="\begin{lstlisting}
+class TryCatch
+{
+public static void main (String[] args)
+...
+...ted
+System.out.println(''Outside try-catch clause'');
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img558.svg"
+ ALT="\begin{lstlisting}
+Exception caught in Catch block
+Outside try-catch clause
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

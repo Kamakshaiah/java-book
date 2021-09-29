@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>To refer current class instance variable</TITLE>
+<META NAME="description" CONTENT="To refer current class instance variable">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node235.html">
+<LINK REL="previous" HREF="node233.html">
+<LINK REL="next" HREF="node235.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node235.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node233.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node233.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1615"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node235.html">To invoke current class</A>
+<B> Up:</B> <A
+ HREF="node233.html">this keyword in Java</A>
+<B> Previous:</B> <A
+ HREF="node233.html">this keyword in Java</A>
+ &nbsp; <B>  <A ID="tex2html1616"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00792100000000000000">
+To refer current class instance variable</A>
+</H3><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The this keyword can be used to refer current class instance variable. If there is ambiguity between the instance variables and parameters, this keyword resolves the problem of ambiguity. Let's understand the problem if we don't use this keyword by the example given below:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img427.svg"
+ ALT="\begin{lstlisting}
+class Student{
+int rollno;
+String name;
+float fee;
+St...
+...nt(112,''sumit'',6000f);
+s1.display();
+s2.display();
+}
+}
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img428.svg"
+ ALT="\begin{lstlisting}
+0 null 0.0
+0 null 0.0
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">In the above example, parameters (formal arguments) and instance variables are same. So, we are using this keyword to distinguish local variable and instance variable. Solution of the above problem by this keyword
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img427.svg"
+ ALT="\begin{lstlisting}
+class Student{
+int rollno;
+String name;
+float fee;
+St...
+...nt(112,''sumit'',6000f);
+s1.display();
+s2.display();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img429.svg"
+ ALT="\begin{lstlisting}
+111 ankit 5000.0
+112 sumit 6000.0
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">If local variables(formal arguments) and instance variables are different, there is no need to use this keyword like in the following program:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img430.svg"
+ ALT="\begin{lstlisting}
+class Student{
+int rollno;
+String name;
+float fee;
+St...
+...nt(112,''sumit'',6000f);
+s1.display();
+s2.display();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img429.svg"
+ ALT="\begin{lstlisting}
+111 ankit 5000.0
+112 sumit 6000.0
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

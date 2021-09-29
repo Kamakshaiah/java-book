@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Default Exception Handling</TITLE>
+<META NAME="description" CONTENT="Default Exception Handling">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="previous" HREF="node287.html">
+<LINK REL="next" HREF="node289.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node289.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node286.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node287.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1789"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node289.html">Types</A>
+<B> Up:</B> <A
+ HREF="node286.html">Errors Vs. Exceptions</A>
+<B> Previous:</B> <A
+ HREF="node287.html">Exceptions</A>
+ &nbsp; <B>  <A ID="tex2html1790"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00812000000000000000">
+Default Exception Handling</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Whenever inside a method, if an exception has occurred, the method creates an object known as <SPAN  CLASS="textit">exception object</SPAN> and hands it off to the run-time system(JVM). An exception object is an instance of an exception class. It gets created and handed to the Java runtime when an exceptional event occurred that disrupted the normal flow of the application. This is called “to throw an exception” because in Java you use the keyword “throw” to hand the exception to the runtime. When a method throws an exception object, the runtime searches the call stack for a piece of code that handles it. The exception object contains <SPAN  CLASS="textit">name</SPAN> and <SPAN  CLASS="textit">description</SPAN> of the exception, and current state of the program where exception has occurred. <SPAN  CLASS="textit">Creating the Exception Object and handling it to the run-time system is called throwing an exception</SPAN>. There might be the list of the methods that had been called to get to the method where exception was occurred. This ordered list of the methods is called <SPAN  CLASS="textit">Call Stack</SPAN>. Now the following procedure will happen.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<OL>
+<LI>The run-time system searches the call stack to find the method that contains block of code that can handle the occurred exception. The block of the code is called Exception handler.
+</LI>
+<LI>The run-time system starts searching from the method in which exception occurred, proceeds through call stack in the reverse order in which methods were called.
+</LI>
+<LI>If it finds  appropriate handler then it passes the occurred exception to it. Appropriate handler means the type of the exception object thrown matches the type of the exception object it can handle.
+</LI>
+<LI>If run-time system searches all the methods on call stack and could have found the appropriate handler then run-time system handover the exception object to default exception handler, which is part of run-time system. This handler prints the exception information in certain format and terminates program abnormally. 
+</LI>
+</OL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">See the below diagram to understand the flow of the call stack.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV class="CENTER"><A ID=""></A><A ID="3346"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 5.2:</STRONG>
+Call stack in Java</CAPTION>
+<TR><TD><IMG STYLE=""
+ SRC="./call-stack.png"
+ ALT="Image call-stack"></TD></TR>
+</TABLE>
+</DIV>
+<SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img535.svg"
+ ALT="\begin{lstlisting}
+\par
+// Java program to demonstrate how exception is thrown. ...
+...ing str = null;
+System.out.println(str.length());
+\par
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img536.svg"
+ ALT="\begin{lstlisting}
+Exception in thread ''main'' java.lang.NullPointerException
+at ThrowsExecp.main(File.java:8)
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Let us see an example that illustrate how run-time system searches appropriate exception handling code on the call stack. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img537.svg"
+ ALT="\begin{lstlisting}
+\par
+// Java program to demonstrate exception is thrown
+// h...
+...y zero)
+System.out.println(ex.getMessage());
+}
+}
+}
+\par
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img538.svg"
+ ALT="\begin{lstlisting}
+/ by zero.
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node289.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node286.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node287.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1789"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node289.html">Types</A>
+<B> Up:</B> <A
+ HREF="node286.html">Errors Vs. Exceptions</A>
+<B> Previous:</B> <A
+ HREF="node287.html">Exceptions</A>
+ &nbsp; <B>  <A ID="tex2html1790"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

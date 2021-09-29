@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Access HashMap Elements</TITLE>
+<META NAME="description" CONTENT="Access HashMap Elements">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node147.html">
+<LINK REL="previous" HREF="node145.html">
+<LINK REL="next" HREF="node147.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node147.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node144.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node145.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1226"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node147.html">Remove Elements</A>
+<B> Up:</B> <A
+ HREF="node144.html">Methods of HashMap</A>
+<B> Previous:</B> <A
+ HREF="node145.html">Insert Elements to HashMap</A>
+ &nbsp; <B>  <A ID="tex2html1227"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION005102200000000000000">
+Access HashMap Elements</A>
+</H3>
+
+<P>
+
+<OL>
+<LI><SPAN  CLASS="textit">entrySet()</SPAN> - returns a set of all the key/value mapping of the map
+</LI>
+<LI><SPAN  CLASS="textit">keySet()</SPAN> - returns a set of all the keys of the map
+</LI>
+<LI><SPAN  CLASS="textit">values()</SPAN> - returns a set of all the values of the map
+</LI>
+</OL>
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img271.svg"
+ ALT="\begin{lstlisting}
+import java.util.HashMap;
+class Main {
+public static void ma...
+... ()
+System.out.println(''Values : '' + numbers.values());
+}
+}
+\end{lstlisting}">
+<BR>
+
+<P>
+Output
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img272.svg"
+ ALT="\begin{lstlisting}
+HashMap : { One =1 , Two =2 , Three =3}
+Key / Value mappings ...
+...=2 , Three =3]
+Keys : [ One , Two , Three ]
+Values : [1 , 2, 3]
+\end{lstlisting}">
+<BR>
+
+<P>
+Using <SPAN  CLASS="texttt">get()</SPAN> and <SPAN  CLASS="texttt">getOrDefault()</SPAN>. 
+
+<P>
+
+<OL>
+<LI><SPAN  CLASS="textit">get()</SPAN> - Returns the value associated with the specified key. Returns null if the key is not found.
+</LI>
+<LI><SPAN  CLASS="textit">getOrDefault()</SPAN> - Returns the value associated with the specified key. Returns the specified default value if the key is not found.
+</LI>
+</OL>
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img273.svg"
+ ALT="\begin{lstlisting}
+import java.util.HashMap;
+class Main {
+public static void ma...
+... 5);
+System.out.println(''Returned Number : '' + value2);
+}
+}
+\end{lstlisting}">
+<BR>
+
+<P>
+Output
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img274.svg"
+ ALT="\begin{lstlisting}
+HashMap : { One =1 , Two =2 , Three =3}
+Returned Number : 3
+Returned Number : 5
+\end{lstlisting}">
+<BR>
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

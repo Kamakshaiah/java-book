@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>ThreadGroup in Java</TITLE>
+<META NAME="description" CONTENT="ThreadGroup in Java">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node322.html">
+<LINK REL="previous" HREF="node320.html">
+<LINK REL="next" HREF="node322.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node322.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node320.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1930"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node322.html">Java Shutdown Hook</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node320.html">Java Thread Pool</A>
+ &nbsp; <B>  <A ID="tex2html1931"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION009312000000000000000">
+ThreadGroup in Java</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Java provides a convenient way to group multiple threads in a single object. In such way, we can suspend, resume or interrupt group of threads by a single method call. Java thread group is implemented by <SPAN  CLASS="texttt">java.lang.ThreadGroup</SPAN> class. A ThreadGroup represents a set of threads. A thread group can also include the other thread group. The thread group creates a tree in which every thread group except the initial thread group has a parent. A thread is allowed to access information about its own thread group, but it cannot access the information about its thread group's parent thread group or any other thread groups. There are only two constructors of ThreadGroup class.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><P></P>
+<DIV class="CENTER"><A ID="3684"></A>
+<TABLE>
+<CAPTION><STRONG>Table 6.3:</STRONG>
+Threadgroup</CAPTION>
+<TR><TD><TABLE class="PAD  BORDER" style="">
+<TR><TD CLASS="LEFT">No.</TD>
+<TD CLASS="LEFT">Constructor</TD>
+<TD CLASS="LEFT">Description</TD>
+</TR>
+<TR><TD CLASS="LEFT">1</TD>
+<TD CLASS="LEFT">ThreadGroup(String name)</TD>
+<TD CLASS="LEFT">creates a thread group with given name.</TD>
+</TR>
+<TR><TD CLASS="LEFT">2</TD>
+<TD CLASS="LEFT">ThreadGroup(ThreadGroup parent, String name)</TD>
+<TD CLASS="LEFT">creates a thread</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">group with given parent group and name.</TD>
+</TR>
+</TABLE>
+
+<A ID=""></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">There are many methods in ThreadGroup class. A list of ThreadGroup methods are given below.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><P></P>
+<DIV class="CENTER"><A ID="3691"></A>
+<TABLE>
+<CAPTION><STRONG>Table 6.4:</STRONG>
+Methods for ThreadGroup class</CAPTION>
+<TR><TD><TABLE class="PAD  BORDER" style="">
+<TR><TD CLASS="LEFT">S.N.</TD>
+<TD CLASS="LEFT">Modifier and Type	Method</TD>
+<TD CLASS="LEFT">Description</TD>
+</TR>
+<TR><TD CLASS="LEFT">1</TD>
+<TD CLASS="LEFT">void	checkAccess()</TD>
+<TD CLASS="LEFT">This method determines if the</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">currently running thread has permission to modify the</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">thread group.</TD>
+</TR>
+<TR><TD CLASS="LEFT">2</TD>
+<TD CLASS="LEFT">int	activeCount()</TD>
+<TD CLASS="LEFT">This method returns an estimate of</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">the number of active threads in the thread group and</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">its subgroups.</TD>
+</TR>
+<TR><TD CLASS="LEFT">3</TD>
+<TD CLASS="LEFT">int	activeGroupCount()</TD>
+<TD CLASS="LEFT">This method returns an</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">estimate of the number of active groups in the</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">thread group and its subgroups.</TD>
+</TR>
+<TR><TD CLASS="LEFT">4</TD>
+<TD CLASS="LEFT">void	destroy()</TD>
+<TD CLASS="LEFT">This method destroys the thread group</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">and all of its subgroups.</TD>
+</TR>
+<TR><TD CLASS="LEFT">5</TD>
+<TD CLASS="LEFT">int	enumerate(Thread[] list)</TD>
+<TD CLASS="LEFT">This method copies into</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">the specified</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">array every active thread in the thread group and</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">its subgroups.</TD>
+</TR>
+<TR><TD CLASS="LEFT">6</TD>
+<TD CLASS="LEFT">int	getMaxPriority()</TD>
+<TD CLASS="LEFT">This method returns the</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">maximum priority of the thread group.</TD>
+</TR>
+<TR><TD CLASS="LEFT">7</TD>
+<TD CLASS="LEFT">String	getName()</TD>
+<TD CLASS="LEFT">This method returns the name of</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">the thread group.</TD>
+</TR>
+<TR><TD CLASS="LEFT">8</TD>
+<TD CLASS="LEFT">ThreadGroup	getParent()</TD>
+<TD CLASS="LEFT">This method returns the parent of</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">the thread group.</TD>
+</TR>
+<TR><TD CLASS="LEFT">9</TD>
+<TD CLASS="LEFT">void	interrupt()</TD>
+<TD CLASS="LEFT">This method interrupts all threads</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">in the thread group.</TD>
+</TR>
+<TR><TD CLASS="LEFT">10</TD>
+<TD CLASS="LEFT">boolean	isDaemon()</TD>
+<TD CLASS="LEFT">This method tests if the thread</TD>
+</TR>
+<TR><TD CLASS="LEFT">11</TD>
+<TD CLASS="LEFT">void	setDaemon(boolean daemon)</TD>
+<TD CLASS="LEFT">This method changes</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">the daemon status of the thread group.</TD>
+</TR>
+<TR><TD CLASS="LEFT">12</TD>
+<TD CLASS="LEFT">boolean	isDestroyed()</TD>
+<TD CLASS="LEFT">This method tests if this</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">thread group has been destroyed.</TD>
+</TR>
+<TR><TD CLASS="LEFT">13</TD>
+<TD CLASS="LEFT">void	list()</TD>
+<TD CLASS="LEFT">This method prints information</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">about the thread group to the standard output.</TD>
+</TR>
+<TR><TD CLASS="LEFT">14</TD>
+<TD CLASS="LEFT">boolean	parentOf(ThreadGroup g</TD>
+<TD CLASS="LEFT">This method</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">tests if the thread group is either the thread group</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">argument or one of its ancestor thread groups.</TD>
+</TR>
+<TR><TD CLASS="LEFT">15</TD>
+<TD CLASS="LEFT">void	suspend()</TD>
+<TD CLASS="LEFT">This method is used to suspend all</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">threads in the thread group.</TD>
+</TR>
+<TR><TD CLASS="LEFT">16</TD>
+<TD CLASS="LEFT">void	resume()</TD>
+<TD CLASS="LEFT">This method is used to resume all</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">threads in the thread group which was suspended using</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">suspend() method.</TD>
+</TR>
+<TR><TD CLASS="LEFT">17</TD>
+<TD CLASS="LEFT">void	setMaxPriority(int pri)</TD>
+<TD CLASS="LEFT">This method sets</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">the maximum priority of the group.</TD>
+</TR>
+<TR><TD CLASS="LEFT">18</TD>
+<TD CLASS="LEFT">void	stop()</TD>
+<TD CLASS="LEFT">This method is used to stop all</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">threads in the thread group.</TD>
+</TR>
+<TR><TD CLASS="LEFT">19</TD>
+<TD CLASS="LEFT">String	toString()</TD>
+<TD CLASS="LEFT">This method returns a string</TD>
+</TR>
+<TR><TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">&nbsp;</TD>
+<TD CLASS="LEFT">representation of the Thread group.</TD>
+</TR>
+</TABLE>
+
+<A ID=""></A></TD></TR>
+</TABLE>
+</DIV><P></P>
+<BR><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Let's see a code to group multiple threads.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img596.svg"
+ ALT="\begin{lstlisting}
+ThreadGroup tg1 = new ThreadGroup(''Group A'');
+Thread t1 = ...
+...o'');
+Thread t3 = new Thread(tg1,new MyRunnable(),''three'');
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Now all 3 threads belong to one group. Here, <SPAN  CLASS="texttt">tg1</SPAN> is the thread group name, <SPAN  CLASS="texttt">MyRunnable</SPAN> is the class that implements Runnable interface and "one", "two" and "three" are the thread names. Now we can interrupt all threads by a single line of code only.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img597.svg"
+ ALT="\begin{lstlisting}
+Thread.currentThread().getThreadGroup().interrupt();
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">ThreadGroup Example
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">File: ThreadGroupDemo.java</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img598.svg"
+ ALT="\begin{lstlisting}
+public class ThreadGroupDemo implements Runnable{
+public vo...
+...read Group Name: ''+tg1.getName());
+tg1.list();
+\par
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img599.svg"
+ ALT="\begin{lstlisting}
+one
+two
+three
+Thread Group Name: Parent ThreadGroup
+java.lang...
+...d[two,5,Parent ThreadGroup]
+Thread[three,5,Parent ThreadGroup]
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node322.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node320.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1930"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node322.html">Java Shutdown Hook</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node320.html">Java Thread Pool</A>
+ &nbsp; <B>  <A ID="tex2html1931"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

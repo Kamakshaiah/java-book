@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Creating multiple objects by one type only</TITLE>
+<META NAME="description" CONTENT="Creating multiple objects by one type only">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node211.html">
+<LINK REL="previous" HREF="node209.html">
+<LINK REL="next" HREF="node211.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node211.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node204.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node209.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1517"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node211.html">Anonymous objects</A>
+<B> Up:</B> <A
+ HREF="node204.html">Classes &amp; Objects in</A>
+<B> Previous:</B> <A
+ HREF="node209.html">Ways to create object</A>
+ &nbsp; <B>  <A ID="tex2html1518"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00756000000000000000">
+Creating multiple objects by one type only</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+
+<UL>
+<LI><SPAN  CLASS="textit">In real-time</SPAN>, we need different objects of a class in different methods. Creating a number of references for storing them is not a good practice and therefore we declare a static reference variable and use it whenever required. In this case, wastage of memory is less. The objects that are not referenced anymore will be destroyed by Garbage Collector of java. Example:
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img384.svg"
+ ALT="\begin{lstlisting}
+Test test = new Test();
+test = new Test();
+\end{lstlisting}">
+<BR> 
+
+<P>
+</LI>
+<LI><SPAN  CLASS="textit">In inheritance system</SPAN>, we use parent class reference variable to store a sub-class object. In this case, we can switch into different subclass objects using same referenced variable. Example:
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img385.svg"
+ ALT="\begin{lstlisting}
+class Animal {}
+\par
+class Dog extends Animal {}
+class Cat e...
+...obj = new Dog();
+\par
+// using Cat object
+obj = new Cat();
+}
+\end{lstlisting}">
+<BR>
+
+<P>
+</LI>
+</UL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

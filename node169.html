@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Java Writer Class</TITLE>
+<META NAME="description" CONTENT="Java Writer Class">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="previous" HREF="node168.html">
+<LINK REL="next" HREF="node170.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node170.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node167.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node168.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1292"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node170.html">Methods of Writer</A>
+<B> Up:</B> <A
+ HREF="node167.html">Java Reader/Writer</A>
+<B> Previous:</B> <A
+ HREF="node168.html">Methods of Reader</A>
+ &nbsp; <B>  <A ID="tex2html1293"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION005142000000000000000">
+Java Writer Class</A>
+</H2>
+
+<P>
+The Writer class of the <SPAN  CLASS="texttt">java.io package</SPAN> is an abstract superclass that represents a stream of characters. Since <SPAN  CLASS="textit">Writer</SPAN> is an abstract class, it is not useful by itself. However, its subclasses can be used to write data. In order to use the functionality of the Writer, we can use its subclasses. Some of them are:
+
+<P>
+
+<OL>
+<LI>BufferedWriter
+</LI>
+<LI>OutputStreamWriter
+</LI>
+<LI>FileWriter
+</LI>
+<LI>StringWriter
+</LI>
+</OL>
+
+<P>
+In order to create a Writer, we must import the <SPAN  CLASS="texttt">java.io.Writer</SPAN> package first. Once we import the package, here is how we can create the writer.
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img313.svg"
+ ALT="\begin{lstlisting}
+// Creates a Writer
+Writer output = new FileWriter () ;
+\end{lstlisting}">
+<BR> 
+
+<P>
+Here, we have created a writer named output using the <SPAN  CLASS="texttt">FileWriter</SPAN> class. It is because the Writer is an abstract class. Hence we cannot create an object of Writer.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html1294"
+  HREF="node170.html">Methods of Writer</A>
+</UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+
+</BODY>
+</HTML>

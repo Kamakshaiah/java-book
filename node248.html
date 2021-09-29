@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Blank or uninitialized final variable</TITLE>
+<META NAME="description" CONTENT="Blank or uninitialized final variable">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node249.html">
+<LINK REL="previous" HREF="node247.html">
+<LINK REL="next" HREF="node249.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node249.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node244.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node247.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1652"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node249.html">static blank final variable</A>
+<B> Up:</B> <A
+ HREF="node244.html">final keyword</A>
+<B> Previous:</B> <A
+ HREF="node247.html">Java final class</A>
+ &nbsp; <B>  <A ID="tex2html1653"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00794400000000000000">
+Blank or uninitialized final variable</A>
+</H3><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">A final variable that is not initialized at the time of declaration is known as blank final variable. If you want to create a variable that is initialized at the time of creating object and once initialized may not be changed, it is useful. For example PAN CARD number of an employee. It can be initialized only in constructor.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img454.svg"
+ ALT="\begin{lstlisting}
+class Student{
+int id;
+String name;
+final String PAN_CARD_NUMBER;
+...
+}
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">We can initialize blank final variable, but only in constructor. For example:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img455.svg"
+ ALT="\begin{lstlisting}
+class Bike10{
+final int speedlimit;//blank final variable
+...
+...public static void main(String args[]){
+new Bike10();
+}
+}
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The output for the above code snippet will be <SPAN  CLASS="texttt">70</SPAN>. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Example of Subpackage</TITLE>
+<META NAME="description" CONTENT="Example of Subpackage">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="previous" HREF="node253.html">
+<LINK REL="next" HREF="node255.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node255.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node253.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node253.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1667"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node255.html">Encapsulation</A>
+<B> Up:</B> <A
+ HREF="node253.html">Subpackage in java</A>
+<B> Previous:</B> <A
+ HREF="node253.html">Subpackage in java</A>
+ &nbsp; <B>  <A ID="tex2html1668"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION007111100000000000000">
+Example of Subpackage</A>
+</H3><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img472.svg"
+ ALT="\begin{lstlisting}
+package com.javatpoint.core;
+class Simple{
+public static v...
+...ng args[]){
+System.out.println(''Hello subpackage'');
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">To Compile</SPAN>: <SPAN  CLASS="texttt">javac -d . Simple.java</SPAN> 
+<BR><SPAN  CLASS="textit">To Run</SPAN>: <SPAN  CLASS="texttt">java com.javatpoint.core.Simple</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The output will be <SPAN  CLASS="texttt">Hello subpackage</SPAN>. How to send the class file to another directory or drive? There is a scenario, I want to put the class file of A.java source file in classes folder of c: drive. For example:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV class="CENTER"><A ID=""></A><A ID="2938"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 4.8:</STRONG>
+Subpackages in Java</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="./anotherpackage.jpg"
+ ALT="Image anotherpackage"></DIV></TD></TR>
+</TABLE>
+</DIV>
+<SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img465.svg"
+ ALT="\begin{lstlisting}
+//save as Simple.java
+package mypack;
+public class Simple{ ...
+... args[]){
+System.out.println(''Welcome to package'');
+}
+}
+\end{lstlisting}">
+<BR>  
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">To Compile:
+<BR>
+<IMG STYLE=""
+ SRC="img473.svg"
+ ALT="\begin{lstlisting}
+e:\sources&gt; javac -d c:\classes Simple.java
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">To Run:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">To run this program from <SPAN  CLASS="textit">e:</SPAN> directory, you need to set classpath of the directory where the class file resides.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img474.svg"
+ ALT="\begin{lstlisting}
+e:\sources&gt; set classpath=c:\classes;.;
+e:\sources&gt; java mypack.Simple
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The <SPAN  CLASS="textit">-classpath</SPAN> switch can be used with <SPAN  CLASS="texttt">javac</SPAN> and java tool. To run this program from <SPAN  CLASS="textit">e:</SPAN> directory, you can use <SPAN  CLASS="texttt">-classpath</SPAN> switch of java that tells where to look for class file. For example:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img475.svg"
+ ALT="\begin{lstlisting}
+e:\sources&gt; java -classpath c:\classes mypack.Simple
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The output will be: <SPAN  CLASS="texttt">Welcome to package</SPAN>. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

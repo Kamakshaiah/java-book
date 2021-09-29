@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>How to Call or Invoke a User-defined Method?</TITLE>
+<META NAME="description" CONTENT="How to Call or Invoke a User-defined Method?">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node221.html">
+<LINK REL="previous" HREF="node219.html">
+<LINK REL="next" HREF="node221.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node221.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node217.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node219.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1553"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node221.html">Static Method</A>
+<B> Up:</B> <A
+ HREF="node217.html">Types of Method</A>
+<B> Previous:</B> <A
+ HREF="node219.html">User-defined Method</A>
+ &nbsp; <B>  <A ID="tex2html1554"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00772300000000000000">
+How to Call or Invoke a User-defined Method?</A>
+</H3><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Once we have defined a method, it should be called. The calling of a method in a program is simple. When we call or invoke a user-defined method, the program control transfer to the called method.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img390.svg"
+ ALT="\begin{lstlisting}
+import java.util.Scanner;
+public class EvenOdd {
+public st...
+...m=scan.nextInt();
+//method calling
+findEvenOdd(num);
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">In the above code snippet, as soon as the compiler reaches at line <SPAN  CLASS="texttt">findEvenOdd(num)</SPAN>, the control transfer to the method and gives the output accordingly. Let's combine both snippets of codes in a single program and execute it.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img391.svg"
+ ALT="\begin{lstlisting}
+import java.util.Scanner;
+public class EvenOdd {
+public st...
+... even'');
+else
+System.out.println(num+'' is odd'');
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output 1:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img392.svg"
+ ALT="\begin{lstlisting}
+Enter the number: 12
+12 is even
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output 2:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img393.svg"
+ ALT="\begin{lstlisting}
+Enter the number: 99
+99 is odd
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Let's see another program that return a value to the calling method. In the following program, we have defined a method named <SPAN  CLASS="texttt">add()</SPAN> that sum up the two numbers. It has two parameters <SPAN  CLASS="textsl">n1</SPAN> and <SPAN  CLASS="textsl">n</SPAN>2 of integer type. The values of <SPAN  CLASS="textit">n1</SPAN> and <SPAN  CLASS="textit">n2</SPAN> correspond to the value of <SPAN  CLASS="textsl">a</SPAN> and <SPAN  CLASS="textit">b</SPAN>, respectively. Therefore, the method adds the value of <SPAN  CLASS="textsl">a</SPAN> and <SPAN  CLASS="textsl">b</SPAN> and store it in the variable s and returns the sum.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img394.svg"
+ ALT="\begin{lstlisting}
+public class Addition
+{
+public static void main(String[] ar...
+...ters
+{
+int s;
+s=n1+n2;
+return s; //returning the sum
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img395.svg"
+ ALT="\begin{lstlisting}
+The sum of a and b is= 24
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node221.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node217.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node219.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1553"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node221.html">Static Method</A>
+<B> Up:</B> <A
+ HREF="node217.html">Types of Method</A>
+<B> Previous:</B> <A
+ HREF="node219.html">User-defined Method</A>
+ &nbsp; <B>  <A ID="tex2html1554"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

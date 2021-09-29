@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Replace Elements</TITLE>
+<META NAME="description" CONTENT="Replace Elements">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node149.html">
+<LINK REL="previous" HREF="node147.html">
+<LINK REL="next" HREF="node149.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node149.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node144.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node147.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1230"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node149.html">Recompute Values</A>
+<B> Up:</B> <A
+ HREF="node144.html">Methods of HashMap</A>
+<B> Previous:</B> <A
+ HREF="node147.html">Remove Elements</A>
+ &nbsp; <B>  <A ID="tex2html1231"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION005102400000000000000">
+Replace Elements</A>
+</H3>
+
+<P>
+
+<OL>
+<LI><SPAN  CLASS="textsl">replace(key, value)</SPAN> - replaces the value associated with the specified key by a new value.
+</LI>
+<LI><SPAN  CLASS="textsl">replace(key, old, new)</SPAN> - replaces the old value with the new value only if old value is already associated with the specified key.
+</LI>
+<LI><SPAN  CLASS="textit">replaceAll(function)</SPAN> - replaces each value of the map with the result of the specified function.
+
+<P>
+</LI>
+</OL>
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img277.svg"
+ ALT="\begin{lstlisting}
+import java.util.HashMap ;
+\par
+class Main {
+public static v...
+...m.out.println(''HashMap using replaceAll ():'' + numbers);
+}
+}
+\end{lstlisting}">
+<BR>
+
+<P>
+Output
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img278.svg"
+ ALT="\begin{lstlisting}
+Original HashMap : { Second =2 , Third =3 , First =1}
+HashMap...
+...HashMap using replaceAll : { Second =24 , Third =35 , First =3}
+\end{lstlisting}">
+<BR>
+
+<P>
+In the above program notice the statement <SPAN  CLASS="texttt">numbers.replaceAll((key, oldValue) -&gt; oldValue + 2);</SPAN>. This method accesses all the entries of the map. It then replaces all the values with the new values provided by the lambda expression. There isn’t any description about lambda expression in this book, for the scope is beyond the aims of this text.
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

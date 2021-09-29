@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Ways to create object of a class</TITLE>
+<META NAME="description" CONTENT="Ways to create object of a class">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node210.html">
+<LINK REL="previous" HREF="node208.html">
+<LINK REL="next" HREF="node210.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node210.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node204.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node208.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1515"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node210.html">Creating multiple objects by</A>
+<B> Up:</B> <A
+ HREF="node204.html">Classes &amp; Objects in</A>
+<B> Previous:</B> <A
+ HREF="node208.html">Initializing an object</A>
+ &nbsp; <B>  <A ID="tex2html1516"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00755000000000000000">
+Ways to create object of a class</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">There are four ways to create objects in java.Strictly speaking there is only one way(by using new keyword),and the rest internally use new keyword. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+
+<UL>
+<LI><SPAN  CLASS="textit">Using new keyword</SPAN>: It is the most common and general way to create object in java. Example:
+<BR>
+<IMG STYLE=""
+ SRC="img380.svg"
+ ALT="\begin{lstlisting}
+// creating object of class Test
+Test t = new Test();
+\end{lstlisting}">
+<BR>
+
+<P>
+</LI>
+<LI><SPAN  CLASS="textit">Using <SPAN  CLASS="texttt">Class.forName(String className)</SPAN> method</SPAN>: There is a pre-defined class in java.lang package with name Class. The forName(String className) method returns the Class object associated with the class with the given string name.We have to give the fully qualified name for a class. On calling new Instance() method on this Class object returns new instance of the class with the given string name.
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img381.svg"
+ ALT="\begin{lstlisting}
+// creating object of public class Test
+// consider class Tes...
+...
+Test obj = (Test)Class.forName(''com.p1.Test'').newInstance();
+\end{lstlisting}">
+<BR>
+
+<P>
+</LI>
+<LI><SPAN  CLASS="textit">Using <SPAN  CLASS="texttt">clone()</SPAN> method</SPAN>: clone() method is present in Object class. It creates and returns a copy of the object.
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img382.svg"
+ ALT="\begin{lstlisting}
+// creating object of class Test
+Test t1 = new Test();
+\par
+// creating clone of above object
+Test t2 = (Test)t1.clone();
+\end{lstlisting}">
+<BR>
+
+<P>
+</LI>
+<LI><SPAN  CLASS="textit">Deserialization</SPAN>: De-serialization is technique of reading an object from the saved state in a file. Refer Serialization/De-Serialization in java
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img383.svg"
+ ALT="\begin{lstlisting}
+FileInputStream file = new FileInputStream(filename);
+ObjectI...
+...in = new ObjectInputStream(file);
+Object obj = in.readObject();
+\end{lstlisting}">
+<BR>
+
+<P>
+</LI>
+</UL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

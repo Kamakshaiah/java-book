@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Default Method in Interface</TITLE>
+<META NAME="description" CONTENT="Default Method in Interface">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node267.html">
+<LINK REL="previous" HREF="node265.html">
+<LINK REL="next" HREF="node267.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node267.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node261.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node265.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1702"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node267.html">Static Method in Interface</A>
+<B> Up:</B> <A
+ HREF="node261.html">Interface</A>
+<B> Previous:</B> <A
+ HREF="node265.html">Interface inheritance</A>
+ &nbsp; <B>  <A ID="tex2html1703"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION007145000000000000000">
+Default Method in Interface</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Since Java 8, we can have method body in interface. But we need to make it default method. Let's see an example:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">File: TestInterfaceDefault.java</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img500.svg"
+ ALT="\begin{lstlisting}
+interface Drawable{
+void draw();
+default void msg(){System....
+...args[]){
+Drawable d=new Rectangle();
+d.draw();
+d.msg();
+}}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img501.svg"
+ ALT="\begin{lstlisting}
+drawing rectangle
+default method
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

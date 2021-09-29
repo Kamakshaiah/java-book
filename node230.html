@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Java static variable</TITLE>
+<META NAME="description" CONTENT="Java static variable">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node231.html">
+<LINK REL="previous" HREF="node229.html">
+<LINK REL="next" HREF="node231.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node231.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node229.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node229.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1601"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node231.html">Java static method</A>
+<B> Up:</B> <A
+ HREF="node229.html">static</A>
+<B> Previous:</B> <A
+ HREF="node229.html">static</A>
+ &nbsp; <B>  <A ID="tex2html1602"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION00791100000000000000">
+Java static variable</A>
+</H3><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">If you declare any variable as static, it is known as a static variable. The static variable can be used to refer to the common property of all objects (which is not unique for each object), for example, the company name of employees, college name of students, etc. The static variable gets memory only once in the class area at the time of class loading. It makes your program memory efficient (i.e., it saves memory). Let us understanding the problem without static variable. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img415.svg"
+ ALT="\begin{lstlisting}
+class Student{
+int rollno;
+String name;
+String college=''ITS'';
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Suppose there are 500 students in my college, now all instance data members will get memory each time when the object is created. All students have its unique <SPAN  CLASS="textit">rollno</SPAN> and <SPAN  CLASS="textit">name</SPAN>, so instance data member is good in such case. Here, "college" refers to the common property of all objects. If we make it static, this field will get the memory only once. The following is the example of static variable. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img416.svg"
+ ALT="\begin{lstlisting}
+//Java Program to demonstrate the use of static variable
+cla...
+...dent.college=''BBDIT'';
+s1.display();
+s2.display();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img417.svg"
+ ALT="\begin{lstlisting}
+111 Karan ITS
+222 Aryan ITS
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV class="CENTER"><A ID=""></A><A ID="2637"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 4.5:</STRONG>
+Static keyword</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="./staticvariable.jpg"
+ ALT="Image staticvariable"></DIV></TD></TR>
+</TABLE>
+</DIV>
+<SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Let us understand as how the keyword <SPAN  CLASS="texttt">static</SPAN> is useful while handing logic in Java programs. The following example deals with a variable <SPAN  CLASS="textit">counter</SPAN> in a class which is not static. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img418.svg"
+ ALT="\begin{lstlisting}
+//Java Program to demonstrate the use of an instance variable...
+...
+Counter c2=new Counter();
+Counter c3=new Counter();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img419.svg"
+ ALT="\begin{lstlisting}
+1
+1
+1
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">In this example, we have created an instance variable named count which is incremented in the constructor. Since instance variable gets the memory at the time of object creation, each object will have the copy of the instance variable. If it is incremented, it won't reflect other objects. So each object will have the value 1 in the count variable.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">As we have mentioned above, static variable will get the memory only once, if any object changes the value of the static variable, it will retain its value.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img420.svg"
+ ALT="\begin{lstlisting}
+//Java Program to illustrate the use of static variable which...
+...ounter2 c2=new Counter2();
+Counter2 c3=new Counter2();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img421.svg"
+ ALT="\begin{lstlisting}
+1
+2
+3
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node231.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node229.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node229.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1601"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node231.html">Java static method</A>
+<B> Up:</B> <A
+ HREF="node229.html">static</A>
+<B> Previous:</B> <A
+ HREF="node229.html">static</A>
+ &nbsp; <B>  <A ID="tex2html1602"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

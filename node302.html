@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Multithreading</TITLE>
+<META NAME="description" CONTENT="Multithreading">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node334.html">
+<LINK REL="previous" HREF="node285.html">
+<LINK REL="next" HREF="node303.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node303.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="Java_Book.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node301.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1832"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node303.html">Multitasking</A>
+<B> Up:</B> <A
+ HREF="Java_Book.html">A CONCISE MANUAL ON</A>
+<B> Previous:</B> <A
+ HREF="node301.html">Control flow in try-catch-finally</A>
+ &nbsp; <B>  <A ID="tex2html1833"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00900000000000000000">
+Multithreading</A>
+</H1><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Multithreading in Java is a process of executing multiple threads simultaneously. A thread is a lightweight sub-process, the smallest unit of processing. Multiprocessing and multithreading, both are used to achieve multitasking. However, we use multithreading than multiprocessing because threads use a shared memory area. They don't allocate separate memory area so saves memory, and context-switching between the threads takes less time than process. Java Multithreading is mostly used in games, animation, etc.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Advantages of Java Multithreading
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<UL>
+<LI>It doesn't block the user because threads are independent and you can perform multiple operations at the same time.
+</LI>
+<LI>You can perform many operations together, so it saves time.
+</LI>
+<LI>Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+<P>
+</LI>
+</UL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html1834"
+  HREF="node303.html">Multitasking</A>
+<UL>
+<LI><A ID="tex2html1835"
+  HREF="node304.html">Process-based Multitasking (Multiprocessing)</A>
+<LI><A ID="tex2html1836"
+  HREF="node305.html">Thread-based Multitasking (Multithreading)</A>
+<LI><A ID="tex2html1837"
+  HREF="node306.html">What is Thread in java</A>
+</UL>
+<BR>
+<LI><A ID="tex2html1838"
+  HREF="node307.html">Life cycle of a Thread (Thread States)</A>
+<LI><A ID="tex2html1839"
+  HREF="node308.html">How to create thread</A>
+<UL>
+<LI><A ID="tex2html1840"
+  HREF="node309.html">Thread class</A>
+<LI><A ID="tex2html1841"
+  HREF="node310.html">Java Thread Example by extending Thread class</A>
+<LI><A ID="tex2html1842"
+  HREF="node311.html">Thread Scheduler in Java</A>
+<LI><A ID="tex2html1843"
+  HREF="node312.html">Sleep method in java</A>
+<LI><A ID="tex2html1844"
+  HREF="node313.html">The <SPAN  CLASS="texttt">join()</SPAN> method</A>
+<LI><A ID="tex2html1845"
+  HREF="node314.html"><SPAN  CLASS="texttt">getName(),setName(String)</SPAN> and <SPAN  CLASS="texttt">getId()</SPAN> method:</A>
+<LI><A ID="tex2html1846"
+  HREF="node315.html">The <SPAN  CLASS="texttt">currentThread()</SPAN> method</A>
+<LI><A ID="tex2html1847"
+  HREF="node316.html">Naming Thread</A>
+<UL>
+<LI><A ID="tex2html1848"
+  HREF="node317.html">Current Thread</A>
+</UL>
+<LI><A ID="tex2html1849"
+  HREF="node318.html">Priority of a Thread (Thread Priority)</A>
+<LI><A ID="tex2html1850"
+  HREF="node319.html">Daemon Thread in Java</A>
+<LI><A ID="tex2html1851"
+  HREF="node320.html">Java Thread Pool</A>
+<LI><A ID="tex2html1852"
+  HREF="node321.html">ThreadGroup in Java</A>
+<LI><A ID="tex2html1853"
+  HREF="node322.html">Java Shutdown Hook</A>
+<LI><A ID="tex2html1854"
+  HREF="node323.html">Performing single task by multiple threads</A>
+<LI><A ID="tex2html1855"
+  HREF="node324.html">Performing multiple tasks by multiple threads (multitasking in multithreading)</A>
+<LI><A ID="tex2html1856"
+  HREF="node325.html">Annonymous class that implements Runnable interface</A>
+<LI><A ID="tex2html1857"
+  HREF="node326.html">Java Garbage Collection</A>
+<UL>
+<LI><A ID="tex2html1858"
+  HREF="node327.html">How can an object be unreferenced?</A>
+<LI><A ID="tex2html1859"
+  HREF="node328.html">finalize() method</A>
+<LI><A ID="tex2html1860"
+  HREF="node329.html">gc() method</A>
+</UL>
+<LI><A ID="tex2html1861"
+  HREF="node330.html">Java Runtime class</A>
+<UL>
+<LI><A ID="tex2html1862"
+  HREF="node331.html">Java Runtime exec() method</A>
+<LI><A ID="tex2html1863"
+  HREF="node332.html">How to shutdown system in Java</A>
+<LI><A ID="tex2html1864"
+  HREF="node333.html">Java Runtime freeMemory() and totalMemory() method</A>
+</UL></UL></UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+
+</BODY>
+</HTML>

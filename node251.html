@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Modules</TITLE>
+<META NAME="description" CONTENT="Modules">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node252.html">
+<LINK REL="previous" HREF="node228.html">
+<LINK REL="next" HREF="node252.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node252.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node192.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node250.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1658"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node252.html">Packages</A>
+<B> Up:</B> <A
+ HREF="node192.html">Object-Oriented Programming</A>
+<B> Previous:</B> <A
+ HREF="node250.html">final parameter</A>
+ &nbsp; <B>  <A ID="tex2html1659"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION007100000000000000000">
+Modules</A>
+</H1><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Java Module System is a major change in Java 9 version. Java added this feature to collect Java packages and code into a single unit called module. In earlier versions of Java, there was no concept of module to create modular Java applications, that why size of application increased and difficult to move around. Even JDK itself was too heavy in size, in Java 8, rt.jar file size is around 64MB. To deal with situation, Java 9 restructured JDK into set of modules so that we can use only required module for our project. Apart from JDK, Java also allows us to create our own modules so that we can develop module based application. The module system includes various tools and options that are given below.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+
+<OL>
+<LI>Includes various options to the Java tools javac, jlink and java where we can specify module paths that locates to the location of module.
+</LI>
+<LI>Modular JAR file is introduced. This JAR contains module-info.class file in its root folder.
+</LI>
+<LI>JMOD format is introduced, which is a packaging format similar to JAR except it can include native code and configuration files.
+</LI>
+<LI>The JDK and JRE both are reconstructed to accommodate modules. It improves performance, security and maintainability.
+Java defines a new URI scheme for naming modules, classes and resources.
+</LI>
+</OL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Module is a collection of Java programs or softwares. To describe a module, a Java file module-info.java is required. This file also known as module descriptor and defines the following
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+
+<OL>
+<LI>Module name
+</LI>
+<LI>What does it export
+</LI>
+<LI>What does it require
+</LI>
+</OL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">It is a name of module and should follow the reverse-domain-pattern. Like we name packages, e.g. com.javatpoint. Creating Java module required the following steps.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+
+<OL>
+<LI>Create a directory structure
+</LI>
+<LI>Create a module declarator
+</LI>
+<LI>Java source code
+</LI>
+</OL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">To create module, it is recommended to follow given directory structure, it is same as reverse-domain-pattern, we do to create packages/project-structure in Java.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV class="CENTER"><A ID=""></A><A ID="2851"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 4.7:</STRONG>
+Directory for Java module file.</CAPTION>
+<TR><TD>
+<DIV class="CENTER">
+<IMG STYLE=""
+ SRC="./java-module.png"
+ ALT="Image java-module"></DIV></TD></TR>
+</TABLE>
+</DIV>
+<SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Create a file <SPAN  CLASS="texttt">module-info.java</SPAN>, inside this file, declare a module by using module identifier and provide module name same as the directory name that contains it. In our case, our directory name is <SPAN  CLASS="texttt">com.javatpoint</SPAN>.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img458.svg"
+ ALT="\begin{lstlisting}
+module com.javatpoint{
+\par
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Leave module body empty, if it does not has any module dependency. Save this file inside <SPAN  CLASS="textit">src/com.javatpoint</SPAN> with <SPAN  CLASS="texttt">module-info.java</SPAN> name. Now, create a Java file to compile and execute module. In our example, we have a <SPAN  CLASS="texttt">Hello.java</SPAN> file that contains the following code.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img459.svg"
+ ALT="\begin{lstlisting}
+class Hello{
+public static void main(String[] args){
+System.out.println(''Hello from the Java module'');
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Save this file inside <SPAN  CLASS="textit">src/com.javatpoint/com/javatpoint/</SPAN> with <SPAN  CLASS="texttt">Hello.java</SPAN> name. To compile the module use the following command.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img460.svg"
+ ALT="\begin{lstlisting}
+javac -d mods --module-source-path src/ --module com.javatpoint
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">To run the compiled module, use the following command.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img461.svg"
+ ALT="\begin{lstlisting}
+java --module-path mods/ --module com.javatpoint/com.javatpoint.Hello
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img462.svg"
+ ALT="\begin{lstlisting}
+Hello from the Java module
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">To see the compiled module descriptor use the following command.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img463.svg"
+ ALT="\begin{lstlisting}
+javap mods/com.javatpoint/module-info.class
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">This command will show the following code to the console.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img464.svg"
+ ALT="\begin{lstlisting}
+Compiled from ''module-info.java''
+module com.javatpoint {
+requires java.base;
+}
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">See, we created an empty module but it contains a <SPAN  CLASS="texttt">java.base</SPAN> module. Why? Because all Java modules are linked to <SPAN  CLASS="texttt">java.base</SPAN> module and it is default module.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node252.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node192.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node250.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1658"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node252.html">Packages</A>
+<B> Up:</B> <A
+ HREF="node192.html">Object-Oriented Programming</A>
+<B> Previous:</B> <A
+ HREF="node250.html">final parameter</A>
+ &nbsp; <B>  <A ID="tex2html1659"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

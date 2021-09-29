@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Anonymous objects</TITLE>
+<META NAME="description" CONTENT="Anonymous objects">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="previous" HREF="node210.html">
+<LINK REL="next" HREF="node212.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node212.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node204.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node210.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1519"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node212.html">Inner Classes (Nested)</A>
+<B> Up:</B> <A
+ HREF="node204.html">Classes &amp; Objects in</A>
+<B> Previous:</B> <A
+ HREF="node210.html">Creating multiple objects by</A>
+ &nbsp; <B>  <A ID="tex2html1520"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00757000000000000000">
+Anonymous objects</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Anonymous objects are the objects that are instantiated but are not stored in a reference variable.  
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+
+<UL>
+<LI>They are used for immediate method calling.
+</LI>
+<LI>They will be destroyed after method calling.
+</LI>
+<LI>They are widely used in different libraries. For example, in AWT libraries, they are used to perform some action on capturing an event(eg a key press).
+</LI>
+</UL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">In the example below, when a key is button(referred by the btn) is pressed, we are simply creating anonymous object of EventHandler class for just calling handle method.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img386.svg"
+ ALT="\begin{lstlisting}
+btn.setOnAction(new EventHandler()
+{
+public void handle(ActionEvent event)
+{
+System.out.println(''Hello World!'');
+}
+});
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

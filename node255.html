@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Encapsulation</TITLE>
+<META NAME="description" CONTENT="Encapsulation">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node256.html">
+<LINK REL="previous" HREF="node252.html">
+<LINK REL="next" HREF="node256.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node256.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node192.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node254.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1669"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node256.html">Abstraction</A>
+<B> Up:</B> <A
+ HREF="node192.html">Object-Oriented Programming</A>
+<B> Previous:</B> <A
+ HREF="node254.html">Example of Subpackage</A>
+ &nbsp; <B>  <A ID="tex2html1670"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION007120000000000000000">
+Encapsulation</A>
+</H1><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Encapsulation in Java is a process of wrapping code and data together into a single unit, for example, a capsule which is mixed of several medicines. We can create a fully encapsulated class in Java by making all the data members of the class private. Now we can use setter and getter methods to set and get the data in it. The Java Bean class is the example of a fully encapsulated class. By providing only a setter or getter method, you can make the class read-only or write-only. In other words, you can skip the getter or setter methods. It provides you the control over the data. Suppose you want to set the value of id which should be greater than 100 only, you can write the logic inside the setter method. You can write the logic not to store the negative numbers in the setter methods. It is a way to achieve data hiding in Java because other class will not be able to access the data through the private data members. The encapsulate class is easy to test. So, it is better for unit testing. The standard IDE's are providing the facility to generate the getters and setters. So, it is easy and fast to create an encapsulated class in Java.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Let's see the simple example of encapsulation that has only one field with its setter and getter methods. Following code snippet is the simple Example of Encapsulation in Java. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">File: Student.java</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img476.svg"
+ ALT="\begin{lstlisting}
+//A Java class which is a fully encapsulated class.
+//It has...
+...me
+public void setName(String name){
+this.name=name
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">File: Test.java</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img477.svg"
+ ALT="\begin{lstlisting}
+//A Java class to test the encapsulated class.
+package com.j...
+...e of the name member
+System.out.println(s.getName());
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Compile By: <SPAN  CLASS="texttt">javac -d . Test.java</SPAN>; Run By: <SPAN  CLASS="texttt">java com.javatpoint.Test</SPAN>. Output for the above program is going to be <SPAN  CLASS="texttt">vijay</SPAN>. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit"><SPAN  CLASS="textbf">Read-Only class:</SPAN></SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img478.svg"
+ ALT="\begin{lstlisting}
+//A Java class which has only getter methods.
+public class S...
+...college
+public String getCollege(){
+return college;
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Now, you can't change the value of the college data member which is AKG.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img479.svg"
+ ALT="\begin{lstlisting}
+s.setCollege(''KITE'');//will render compile time error
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit"><SPAN  CLASS="textbf">Write-Only class</SPAN></SPAN>:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img480.svg"
+ ALT="\begin{lstlisting}
+//A Java class which has only setter methods.
+public class S...
+...oid setCollege(String college){
+this.college=college;
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Now, you can't get the value of the college, you can only change the value of college data member.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img481.svg"
+ ALT="\begin{lstlisting}
+System.out.println(s.getCollege());//Compile Time Error, beca...
+...is private.
+//So, it can't be accessed from outside the class
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit"><SPAN  CLASS="textbf">Another Example of Encapsulation in Java</SPAN></SPAN>:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Let's see another example of encapsulation that has only four fields with its setter and getter methods.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">File: Account.java</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img482.svg"
+ ALT="\begin{lstlisting}
+//A Account class which is a fully encapsulated class.
+//It ...
+... void setAmount(float amount) {
+this.amount = amount;
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">File: TestAccount.java</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img483.svg"
+ ALT="\begin{lstlisting}
+//A Java class to test the encapsulated class Account.
+publi...
+....getName()+'' ''+acc.getEmail()+'' ''+acc.getAmount());
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img484.svg"
+ ALT="\begin{lstlisting}
+7560504000 Sonoo Jaiswal sonoojaiswal@javatpoint.com 500000.0
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node256.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node192.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node254.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1669"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node256.html">Abstraction</A>
+<B> Up:</B> <A
+ HREF="node192.html">Object-Oriented Programming</A>
+<B> Previous:</B> <A
+ HREF="node254.html">Example of Subpackage</A>
+ &nbsp; <B>  <A ID="tex2html1670"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

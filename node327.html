@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>How can an object be unreferenced?</TITLE>
+<META NAME="description" CONTENT="How can an object be unreferenced?">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node328.html">
+<LINK REL="previous" HREF="node326.html">
+<LINK REL="next" HREF="node328.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node328.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node326.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node326.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1945"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node328.html">finalize() method</A>
+<B> Up:</B> <A
+ HREF="node326.html">Java Garbage Collection</A>
+<B> Previous:</B> <A
+ HREF="node326.html">Java Garbage Collection</A>
+ &nbsp; <B>  <A ID="tex2html1946"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION009317100000000000000">
+How can an object be unreferenced?</A>
+</H3><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">There are many ways:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<UL>
+<LI>By nulling the reference
+</LI>
+<LI>By assigning a reference to another
+</LI>
+<LI>By anonymous object etc.
+
+<P>
+</LI>
+</UL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">By nulling a reference:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img612.svg"
+ ALT="\begin{lstlisting}
+Employee e=new Employee();
+e=null;
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">By assigning a reference to another:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img613.svg"
+ ALT="\begin{lstlisting}
+Employee e1=new Employee();
+Employee e2=new Employee();
+e1=...
+...irst object referred by e1 is available for garbage collection
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">By anonymous object:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img614.svg"
+ ALT="\begin{lstlisting}
+new Employee();
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

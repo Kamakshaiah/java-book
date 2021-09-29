@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Real scenario</TITLE>
+<META NAME="description" CONTENT="Real scenario">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node260.html">
+<LINK REL="previous" HREF="node258.html">
+<LINK REL="next" HREF="node260.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node260.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node256.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node258.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1681"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node260.html">Abstract class having constructor,</A>
+<B> Up:</B> <A
+ HREF="node256.html">Abstraction</A>
+<B> Previous:</B> <A
+ HREF="node258.html">Abstract Method in Java</A>
+ &nbsp; <B>  <A ID="tex2html1682"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION007133000000000000000">
+Real scenario</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">In this example, Shape is the abstract class, and its implementation is provided by the Rectangle and Circle classes. Mostly, we don't know about the implementation class (which is hidden to the end user), and an object of the implementation class is provided by the factory method. A factory method is a method that returns the instance of the class. We will learn about the factory method later. In this example, if you create the instance of Rectangle class, draw() method of Rectangle class will be invoked.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">File: TestAbstraction1.java</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img487.svg"
+ ALT="\begin{lstlisting}
+abstract class Shape{
+abstract void draw();
+}
+//In real s...
+...ded through method, e.g., getShape() method
+s.draw();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img488.svg"
+ ALT="\begin{lstlisting}
+drawing circle
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

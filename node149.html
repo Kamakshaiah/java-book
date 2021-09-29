@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Recompute Values</TITLE>
+<META NAME="description" CONTENT="Recompute Values">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node150.html">
+<LINK REL="previous" HREF="node148.html">
+<LINK REL="next" HREF="node150.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node150.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node144.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node148.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1232"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node150.html">Using merge() Method</A>
+<B> Up:</B> <A
+ HREF="node144.html">Methods of HashMap</A>
+<B> Previous:</B> <A
+ HREF="node148.html">Replace Elements</A>
+ &nbsp; <B>  <A ID="tex2html1233"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION005102500000000000000">
+Recompute Values</A>
+</H3>
+
+<P>
+Using <SPAN  CLASS="texttt">compute()</SPAN> Method. 
+
+<P>
+
+<OL>
+<LI><SPAN  CLASS="textit">compute() </SPAN>- Computes a new value using the specified function. It then associates the computed value to the specified key.
+</LI>
+<LI><SPAN  CLASS="textit">computeIfAbsent()</SPAN> - If the specified key is not mapped to any value, the method will compute a new value using the
+specified function. It then associates the new value with the key.
+</LI>
+<LI><SPAN  CLASS="textit">computeIfPresent()</SPAN> - If the specified key is already mapped to any value, this method will compute a new value using the specified function. It then associates the new value with the key.
+</LI>
+</OL>
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img279.svg"
+ ALT="\begin{lstlisting}
+import java.util.HashMap;
+\par
+class Main {
+public static vo...
+...println(''HashMap using computeIfPresent(): '' + numbers);
+}
+}
+\end{lstlisting}">
+<BR> 
+
+<P>
+Output
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img280.svg"
+ ALT="\begin{lstlisting}
+Original HashMap : {Second =2 , First =1}
+HashMap using compu...
+...Map using computeIfPresent () : {Second =6, First =3, three =5}
+\end{lstlisting}">
+<BR>
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

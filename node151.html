@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Iterate Through a HashMap</TITLE>
+<META NAME="description" CONTENT="Iterate Through a HashMap">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="previous" HREF="node150.html">
+<LINK REL="next" HREF="node152.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node152.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node144.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node150.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1236"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node152.html">Java Set</A>
+<B> Up:</B> <A
+ HREF="node144.html">Methods of HashMap</A>
+<B> Previous:</B> <A
+ HREF="node150.html">Using merge() Method</A>
+ &nbsp; <B>  <A ID="tex2html1237"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION005102700000000000000">
+Iterate Through a HashMap</A>
+</H3>
+
+<P>
+In a HashMap, we can
+
+<P>
+
+<OL>
+<LI>iterate through its keys
+</LI>
+<LI>iterate through its values
+</LI>
+<LI>iterate through its keys/values
+</LI>
+</OL>
+
+<P>
+Iterating Using the <SPAN  CLASS="texttt">forEach</SPAN> loop. 
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img283.svg"
+ ALT="\begin{lstlisting}
+import java.util.HashMap;
+import java.util.Map.Entry;
+\par
+cl...
+...()) {
+System.out.print(value);
+System.out.print('', '');
+}
+}
+\end{lstlisting}">
+<BR>
+
+<P>
+Output
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img284.svg"
+ ALT="\begin{lstlisting}
+HashMap : { One =1 , Two =2 , Three =3}
+Entries : One =1 , Two =2 , Three =3
+Keys : One , Two , Three ,
+Values : 1, 2, ,3,
+\end{lstlisting}">
+<BR>
+
+<P>
+In the above program, note that we have imported the <SPAN  CLASS="texttt">java.util.Map.Entry package</SPAN>. Here, <SPAN  CLASS="texttt">Map.Entry</SPAN> is the nested class of the Map interface. This nested class returns a view (elements) of the map. It is also possible to iterate a <SPAN  CLASS="textit">HashMap</SPAN> using the <SPAN  CLASS="texttt">iterator()</SPAN> method. In order to use this method, we must import the <SPAN  CLASS="texttt">java.util.Iterator</SPAN> package.
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img285.svg"
+ ALT="\begin{lstlisting}
+import java.util.HashMap;
+import java.util.Iterator;
+import j...
+...out.print( iterate3.next());
+System.out.print('', '');
+}
+}
+}
+\end{lstlisting}">
+<BR>
+
+<P>
+Output
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img286.svg"
+ ALT="\begin{lstlisting}
+HashMap : { One =1 , Two =2 , Three =3}
+Entries : One =1 , Two =2 , Three =3
+Keys : One , Two , Three ,
+Values : 1, 2, 3,
+\end{lstlisting}">
+<BR>
+
+<P>
+In the above program, note that we have imported the <SPAN  CLASS="texttt">java.util.Map.Entry</SPAN> package. Here, <SPAN  CLASS="texttt">Map.Entry</SPAN> is the nested class of the <SPAN  CLASS="textsl">Map</SPAN> interface. This nested class returns a view (elements) of the map.
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Java Thread Pool</TITLE>
+<META NAME="description" CONTENT="Java Thread Pool">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node321.html">
+<LINK REL="previous" HREF="node319.html">
+<LINK REL="next" HREF="node321.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node321.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node319.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1928"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node321.html">ThreadGroup in Java</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node319.html">Daemon Thread in Java</A>
+ &nbsp; <B>  <A ID="tex2html1929"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION009311000000000000000">
+Java Thread Pool</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Java Thread pool represents a group of worker threads that are waiting for the job and reuse many times. In case of thread pool, a group of fixed size threads are created. A thread from the thread pool is pulled out and assigned a job by the service provider. After completion of the job, thread is contained in the thread pool again. One potential advantage of thread pool is that it saves time because there is no need to create new thread. thread pool is used in Servlet and JSP where container creates a thread pool to process the request.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Let's see a simple example of java thread pool using ExecutorService and Executors.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">File: WorkerThread.java</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img593.svg"
+ ALT="\begin{lstlisting}
+import java.util.concurrent.ExecutorService;
+import java.uti...
+...catch (InterruptedException e) { e.printStackTrace(); }
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">File: JavaThreadPoolExample.java</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img594.svg"
+ ALT="\begin{lstlisting}
+public class TestThreadPool {
+public static void main(Strin...
+... }
+\par
+System.out.println(''Finished all threads'');
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img595.svg"
+ ALT="\begin{lstlisting}
+pool-1-thread-1 (Start) message = 0
+pool-1-thread-2 (Start) m...
+...ool-1-thread-3 (End)
+pool-1-thread-5 (End)
+Finished all threads
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

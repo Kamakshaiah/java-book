@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Example of Java Runtime Polymorphism</TITLE>
+<META NAME="description" CONTENT="Example of Java Runtime Polymorphism">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node277.html">
+<LINK REL="previous" HREF="node275.html">
+<LINK REL="next" HREF="node277.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node277.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node275.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node275.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1741"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node277.html">Java Runtime Polymorphism Example:</A>
+<B> Up:</B> <A
+ HREF="node275.html">Runtime Polymorphism in Java</A>
+<B> Previous:</B> <A
+ HREF="node275.html">Runtime Polymorphism in Java</A>
+ &nbsp; <B>  <A ID="tex2html1742"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H3><A ID="SECTION007161100000000000000">
+Example of Java Runtime Polymorphism</A>
+</H3><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">In this example, we are creating two classes <SPAN  CLASS="textit">Bike</SPAN> and <SPAN  CLASS="textit">Splendor</SPAN>. Splendor class extends Bike class and overrides its <SPAN  CLASS="textit">run()</SPAN> method. We are calling the run method by the reference variable of Parent class. Since it refers to the subclass object and subclass method overrides the Parent class method, the subclass method is invoked at runtime. Since method invocation is determined by the JVM not compiler, it is known as runtime polymorphism.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img519.svg"
+ ALT="\begin{lstlisting}
+class Bike{
+void run(){System.out.println(''running'');}
+}...
+...gs[]){
+Bike b = new Splendor();//upcasting
+b.run();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img520.svg"
+ ALT="\begin{lstlisting}
+running safely with 60km.
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+
+</BODY>
+</HTML>

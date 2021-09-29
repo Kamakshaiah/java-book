@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>User-Defined Exceptions</TITLE>
+<META NAME="description" CONTENT="User-Defined Exceptions">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node298.html">
+<LINK REL="previous" HREF="node289.html">
+<LINK REL="next" HREF="node298.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node298.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node285.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node296.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1820"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node298.html">Try-catch</A>
+<B> Up:</B> <A
+ HREF="node285.html">Exception Handling</A>
+<B> Previous:</B> <A
+ HREF="node296.html">ArrayIndexOutOfBounds Exception</A>
+ &nbsp; <B>  <A ID="tex2html1821"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00830000000000000000">
+User-Defined Exceptions</A>
+</H1><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Sometimes, the built-in exceptions in Java are not able to describe a certain situation. In such cases, user can also create exceptions which are called ҵser-defined ExceptionsҮ
+Following steps are followed for the creation of user-defined Exception.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<OL>
+<LI>The user should create an exception class as a subclass of Exception class. Since all the exceptions are subclasses of Exception class, the user should also make his class a subclass of it. This is done as:
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img550.svg"
+ ALT="\begin{lstlisting}
+class MyException extends Exception
+\end{lstlisting}">
+<BR>
+
+<P>
+</LI>
+<LI>We can write a default constructor in his own exception class.
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img551.svg"
+ ALT="\begin{lstlisting}
+MyException(){}
+\end{lstlisting}">
+<BR>
+
+<P>
+</LI>
+<LI>We can also create a parameterized constructor with a string as a parameter. We can use this to store exception details. We can call super class(Exception) constructor from this and send the string there.
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img552.svg"
+ ALT="\begin{lstlisting}
+MyException(String str)
+{
+super(str);
+}
+\end{lstlisting}">
+<BR>
+
+<P>
+</LI>
+<LI>To raise exception of user-defined type, we need to create an object to his exception class and throw it using throw clause, as:
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img553.svg"
+ ALT="\begin{lstlisting}
+MyException me = new MyException(ԅxception detailsԩ;
+throw me;
+\end{lstlisting}">
+<BR>
+
+<P>
+</LI>
+</OL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The following program illustrates how to create own exception class MyException. Details of account numbers, customer names, and balance amounts are taken in the form of three arrays. In <SPAN  CLASS="texttt">main()</SPAN> method, the details are displayed using a for-loop. At this time, check is done if in any account the balance amount is less than the minimum balance amount to be ept in the account. If it is so, then MyException is raised and a message is displayed Balance amount is less.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img554.svg"
+ ALT="\begin{lstlisting}
+\par
+// Java program to demonstrate user defined exception
+\...
+...\par
+catch (MyException e) {
+e.printStackTrace();
+}
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Runtime Error:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img555.svg"
+ ALT="\begin{lstlisting}
+MyException: Balance is less than 1000
+at MyException.main(fileProperty.java:36)
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img556.svg"
+ ALT="\begin{lstlisting}
+ACCNO CUSTOMER BALANCE
+1001 Nish 10000.0
+1002 Shubh 12000.0
+1003 Sush 5600.0
+1004 Abhi 999.0
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node298.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node285.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node296.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1820"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node298.html">Try-catch</A>
+<B> Up:</B> <A
+ HREF="node285.html">Exception Handling</A>
+<B> Previous:</B> <A
+ HREF="node296.html">ArrayIndexOutOfBounds Exception</A>
+ &nbsp; <B>  <A ID="tex2html1821"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

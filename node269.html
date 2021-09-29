@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Inheritance</TITLE>
+<META NAME="description" CONTENT="Inheritance">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node274.html">
+<LINK REL="previous" HREF="node261.html">
+<LINK REL="next" HREF="node270.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node270.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node192.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node268.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1708"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node270.html">Types of inheritance in</A>
+<B> Up:</B> <A
+ HREF="node192.html">Object-Oriented Programming</A>
+<B> Previous:</B> <A
+ HREF="node268.html">Nested Interface in Java</A>
+ &nbsp; <B>  <A ID="tex2html1709"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION007150000000000000000">
+Inheritance</A>
+</H1><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object. It is an important part of OOPs (Object Oriented programming system). The idea behind inheritance in Java is that you can create new classes that are built upon existing classes. When you inherit from an existing class, you can reuse methods and fields of the parent class. Moreover, you can add new methods and fields in your current class also. Inheritance represents the IS-A relationship which is also known as a parent-child relationship.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit"><SPAN  CLASS="textbf">Why use inheritance in java</SPAN></SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+
+<OL>
+<LI>For Method Overriding (so runtime polymorphism can be achieved).
+</LI>
+<LI>For Code Reusability.
+</LI>
+</OL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit"><SPAN  CLASS="textbf">Terms used in Inheritance</SPAN></SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+
+<OL>
+<LI><SPAN  CLASS="textit">Class</SPAN>: A class is a group of objects which have common properties. It is a template or blueprint from which objects are created.
+</LI>
+<LI><SPAN  CLASS="textit">Sub Class/Child Class</SPAN>: Subclass is a class which inherits the other class. It is also called a derived class, extended class, or child class.
+</LI>
+<LI><SPAN  CLASS="textit">Super Class/Parent Class</SPAN>: Superclass is the class from where a subclass inherits the features. It is also called a base class or a parent class.
+</LI>
+<LI><SPAN  CLASS="textit">Reusability</SPAN>: As the name specifies, reusability is a mechanism which facilitates you to reuse the fields and methods of the existing class when you create a new class. You can use the same fields and methods already defined in the previous class.
+</LI>
+</OL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">The syntax of Java Inheritance</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img508.svg"
+ ALT="\begin{lstlisting}
+class Subclass-name extends Superclass-name
+{
+//methods and fields
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The extends keyword indicates that you are making a new class that derives from an existing class. The meaning of "extends" is to increase the functionality. In the terminology of Java, a class which is inherited is called a parent or superclass, and the new class is called child or subclass.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textbf">Java Inheritance Example</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV class="CENTER"><A ID=""></A><A ID="3157"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 4.12:</STRONG>
+Inheritance</CAPTION>
+<TR><TD><IMG STYLE=""
+ SRC="./inheritance.jpg"
+ ALT="Image inheritance"></TD></TR>
+</TABLE>
+</DIV>
+<SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">As displayed in the above figure, Programmer is the subclass and Employee is the superclass. The relationship between the two classes is Programmer IS-A Employee. It means that Programmer is a type of Employee.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img509.svg"
+ ALT="\begin{lstlisting}
+class Employee{
+float salary=40000;
+}
+class Programmer ex...
+...ystem.out.println(''Bonus of Programmer is:''+p.bonus);
+}
+}
+\end{lstlisting}">
+<BR>
+Output
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img510.svg"
+ ALT="\begin{lstlisting}
+Programmer salary is:40000.0
+Bonus of programmer is:10000
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">In the above example, Programmer object can access the field of own class as well as of Employee class i.e. code reusability.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html1710"
+  HREF="node270.html">Types of inheritance in java</A>
+<UL>
+<LI><A ID="tex2html1711"
+  HREF="node271.html">Single Inheritance Example</A>
+<LI><A ID="tex2html1712"
+  HREF="node272.html">Multilevel Inheritance Example</A>
+<LI><A ID="tex2html1713"
+  HREF="node273.html">Hierarchical Inheritance Example</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node270.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node192.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node268.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1708"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node270.html">Types of inheritance in</A>
+<B> Up:</B> <A
+ HREF="node192.html">Object-Oriented Programming</A>
+<B> Previous:</B> <A
+ HREF="node268.html">Nested Interface in Java</A>
+ &nbsp; <B>  <A ID="tex2html1709"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

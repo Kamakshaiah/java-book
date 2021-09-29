@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Methods of Reader</TITLE>
+<META NAME="description" CONTENT="Methods of Reader">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node169.html">
+<LINK REL="previous" HREF="node167.html">
+<LINK REL="next" HREF="node169.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node169.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node167.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node167.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1290"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node169.html">Java Writer Class</A>
+<B> Up:</B> <A
+ HREF="node167.html">Java Reader/Writer</A>
+<B> Previous:</B> <A
+ HREF="node167.html">Java Reader/Writer</A>
+ &nbsp; <B>  <A ID="tex2html1291"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION005141000000000000000">
+Methods of Reader</A>
+</H2>
+
+<P>
+The Reader class provides different methods that are implemented by its subclasses. Here are some of the commonly used methods: 
+
+<P>
+
+<OL>
+<LI><SPAN  CLASS="textit">ready()</SPAN> - checks if the reader is ready to be read.
+</LI>
+<LI><SPAN  CLASS="textit">read(char[] array)</SPAN> - reads the characters from the stream and stores in the specified array.
+</LI>
+<LI><SPAN  CLASS="textit">read(char[] array, int start, int length)</SPAN> - reads the number of characters equal to length from the stream and stores in the specified array starting from the start.
+</LI>
+<LI><SPAN  CLASS="textit">mark()</SPAN> - marks the position in the stream up to which data has been read.
+</LI>
+<LI><SPAN  CLASS="textit">reset()</SPAN> - returns the control to the point in the stream where the mark is set.
+</LI>
+<LI><SPAN  CLASS="textit">skip()</SPAN> - discards the specified number of characters from the stream.
+</LI>
+</OL>
+
+<P>
+Here is how we can implement Reader using the <SPAN  CLASS="texttt">FileReader</SPAN> class. Suppose we have a file named input.txt with the following content.
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img305.svg"
+ ALT="\begin{lstlisting}
+This is a line of text inside the file.
+\end{lstlisting}">
+<BR>
+
+<P>
+Let’s try to read this file using <SPAN  CLASS="texttt">FileReader</SPAN> (a subclass of Reader).
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img311.svg"
+ ALT="\begin{lstlisting}
+import java.io.Reader;
+import java.io.FileReader;
+\par
+class ...
+...e();
+}
+\par
+catch( Exception e ) {
+e.getStackTrace();
+}
+}
+}
+\end{lstlisting}">
+<BR>
+
+<P>
+Output
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img312.svg"
+ ALT="\begin{lstlisting}
+Is there data in the stream ? true
+Data in the stream :
+This is a line of text inside the file .
+\end{lstlisting}">
+<BR>
+
+<P>
+In the above example, we have created a reader using the <SPAN  CLASS="texttt">FileReader</SPAN> class. The reader is linked with the file <SPAN  CLASS="texttt">input.txt</SPAN>.
+
+<P>
+<BR><HR>
+
+</BODY>
+</HTML>

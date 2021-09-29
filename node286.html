@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Errors Vs. Exceptions</TITLE>
+<META NAME="description" CONTENT="Errors Vs. Exceptions">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node289.html">
+<LINK REL="previous" HREF="node285.html">
+<LINK REL="next" HREF="node287.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node287.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node285.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node285.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1783"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node287.html">Exceptions</A>
+<B> Up:</B> <A
+ HREF="node285.html">Exception Handling</A>
+<B> Previous:</B> <A
+ HREF="node285.html">Exception Handling</A>
+ &nbsp; <B>  <A ID="tex2html1784"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION00810000000000000000">
+Errors Vs. Exceptions</A>
+</H1><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">In java, both Errors and Exceptions are the subclasses of <SPAN  CLASS="texttt">java.lang.Throwable</SPAN> class. Error refers to an illegal operation performed by the user which results in the abnormal working of the program. Programming errors often remain undetected until the program is compiled or executed. Some of the errors inhibit the program from getting compiled or executed. Thus errors should be removed before compiling and executing. It is of three types:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+
+<OL>
+<LI>Compile-time
+</LI>
+<LI>Run-time
+</LI>
+<LI>Logical
+</LI>
+</OL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Whereas exceptions in java refer to an unwanted or unexpected event, which occurs during the execution of a program i.e at run time, that disrupts the normal flow of the program’s instructions.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV class="CENTER"><A ID=""></A><A ID="3310"></A>
+<TABLE>
+<CAPTION class="BOTTOM"><STRONG>Figure 5.1:</STRONG>
+Exceptions in Java</CAPTION>
+<TR><TD><IMG STYLE=""
+ SRC="./Exception-in-java.png"
+ ALT="Image Exception-in-java"></TD></TR>
+</TABLE>
+</DIV>
+<SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Now let us discuss various types of errors in order to get a better understanding over arrays. As discussed in the header an error indicates serious problems that a reasonable application should not try to catch. Errors are conditions that cannot get recovered by any handling techniques. It surely causes termination of the program abnormally. Errors belong to unchecked type and mostly occur at runtime. Some of the examples of errors are Out of memory errors or System crash errors. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textbf">Example 1</SPAN>: Compile-time Error
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img530.svg"
+ ALT="\begin{lstlisting}
+// Java Program to Illustrate Error
+// Stack overflow error v...
+...
+// custom integer as an argument
+StackOverflow.test(5);
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textbf">Example 2</SPAN>: Compile-time Error
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img531.svg"
+ ALT="\begin{lstlisting}
+// Java Program to Illustrate Run-time Errors
+\par
+// Main cl...
+...else
+System.out.println(c
++ '' is the largest Number'');
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img532.svg"
+ ALT="\begin{lstlisting}
+8 is the smallest Number
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html1785"
+  HREF="node287.html">Exceptions</A>
+<LI><A ID="tex2html1786"
+  HREF="node288.html">Default Exception Handling</A>
+</UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node287.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node285.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node285.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1783"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node287.html">Exceptions</A>
+<B> Up:</B> <A
+ HREF="node285.html">Exception Handling</A>
+<B> Previous:</B> <A
+ HREF="node285.html">Exception Handling</A>
+ &nbsp; <B>  <A ID="tex2html1784"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

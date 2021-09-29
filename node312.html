@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Sleep method in java</TITLE>
+<META NAME="description" CONTENT="Sleep method in java">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node313.html">
+<LINK REL="previous" HREF="node311.html">
+<LINK REL="next" HREF="node313.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node313.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node311.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1911"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node313.html">The join() method</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node311.html">Thread Scheduler in Java</A>
+ &nbsp; <B>  <A ID="tex2html1912"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION00934000000000000000">
+Sleep method in java</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The <SPAN  CLASS="texttt">sleep()</SPAN> method of Thread class is used to sleep a thread for the specified amount of time. The Thread class provides two methods for sleeping a thread:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<UL>
+<LI>public static void sleep(long miliseconds)throws InterruptedException
+</LI>
+<LI>public static void sleep(long miliseconds, int nanos)throws InterruptedException
+
+<P>
+</LI>
+</UL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Example of sleep method in java
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img564.svg"
+ ALT="\begin{lstlisting}
+class TestSleepMethod1 extends Thread{
+public void run(){
+...
+...new TestSleepMethod1();
+\par
+t1.start();
+t2.start();
+}
+}
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img565.svg"
+ ALT="\begin{lstlisting}
+1
+1
+2
+2
+3
+3
+4
+4
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">As you know well that at a time only one thread is executed. If you sleep a thread for the specified time,the thread shedular picks up another thread and so on.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">A thread can't be executed twisce. After starting a thread, it can never be started again. If you does so, an <SPAN  CLASS="texttt">IllegalThreadStateException</SPAN> is thrown. In such case, thread will run once but for second time, it will throw exception. Let's understand it by the example given below:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img566.svg"
+ ALT="\begin{lstlisting}
+public class TestThreadTwice1 extends Thread{
+public void r...
+... t1=new TestThreadTwice1();
+t1.start();
+t1.start();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Test it Now
+<BR>
+<IMG STYLE=""
+ SRC="img567.svg"
+ ALT="\begin{lstlisting}
+running
+Exception in thread ''main'' java.lang.IllegalThreadStateException
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">What if we call <SPAN  CLASS="texttt">run()</SPAN> method directly instead <SPAN  CLASS="texttt">start()</SPAN> method? Each thread starts in a separate call stack. Invoking the <SPAN  CLASS="texttt">run()</SPAN> method from main thread, the <SPAN  CLASS="texttt">run()</SPAN> method goes onto the current call stack rather than at the beginning of a new call stack.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img568.svg"
+ ALT="\begin{lstlisting}
+class TestCallRun1 extends Thread{
+public void run(){
+Sys...
+....run();//fine, but does not start a separate call stack
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Test it Now
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img569.svg"
+ ALT="\begin{lstlisting}
+Output:running...
+\end{lstlisting}">
+<BR> 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Lets see the other examples
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img570.svg"
+ ALT="\begin{lstlisting}
+class TestCallRun2 extends Thread{
+public void run(){
+for...
+...Run2 t2=new TestCallRun2();
+\par
+t1.run();
+t2.run();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Test it Now
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img571.svg"
+ ALT="\begin{lstlisting}
+Output:1
+2
+3
+4
+5
+1
+2
+3
+4
+5
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">As you can see in the above program that there is no context-switching because here t1 and t2 will be treated as normal object not thread object.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node313.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node311.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1911"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node313.html">The join() method</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node311.html">Thread Scheduler in Java</A>
+ &nbsp; <B>  <A ID="tex2html1912"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Java Shutdown Hook</TITLE>
+<META NAME="description" CONTENT="Java Shutdown Hook">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node323.html">
+<LINK REL="previous" HREF="node321.html">
+<LINK REL="next" HREF="node323.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node323.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node321.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1932"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node323.html">Performing single task by</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node321.html">ThreadGroup in Java</A>
+ &nbsp; <B>  <A ID="tex2html1933"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A ID="SECTION009313000000000000000">
+Java Shutdown Hook</A>
+</H2><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The shutdown hook can be used to perform cleanup resource or save the state when JVM shuts down normally or abruptly. Performing clean resource means closing log file, sending some alerts or something else. So if you want to execute some code before JVM shuts down, use shutdown hook. When does the JVM shut down? The JVM shuts down when:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<UL>
+<LI>user presses ctrl+c on the command prompt
+</LI>
+<LI>System.exit(int) method is invoked
+</LI>
+<LI>user logoff
+</LI>
+<LI>user shutdown etc.
+
+<P>
+</LI>
+</UL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The <SPAN  CLASS="texttt">addShutdownHook()</SPAN> method of Runtime class is used to register the thread with the Virtual Machine. Syntax:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img600.svg"
+ ALT="\begin{lstlisting}
+public void addShutdownHook(Thread hook){}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The object of Runtime class can be obtained by calling the static factory method <SPAN  CLASS="texttt">getRuntime()</SPAN>. For example:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img601.svg"
+ ALT="\begin{lstlisting}
+Runtime r = Runtime.getRuntime();
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The other important aspect is factory method. The method that returns the instance of a class is known as factory method. Following is the simple example of Shutdown Hook. 
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img602.svg"
+ ALT="\begin{lstlisting}
+class MyThread extends Thread{
+public void run(){
+System....
+...exit'');
+try{Thread.sleep(3000);}catch (Exception e) {}
+}
+}
+\end{lstlisting}">
+<BR>
+Output
+<BR>
+<IMG STYLE=""
+ SRC="img603.svg"
+ ALT="\begin{lstlisting}
+Output:Now main sleeping... press ctrl+c to exit
+shut down hook task completed..
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The shutdown sequence can be stopped by invoking the halt(int) method of Runtime class. Same example of Shutdown Hook by annonymous class:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img604.svg"
+ ALT="\begin{lstlisting}
+public class TestShutdown2{
+public static void main(String[]...
+...exit'');
+try{Thread.sleep(3000);}catch (Exception e) {}
+}
+}
+\end{lstlisting}">
+<BR>
+Output
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img603.svg"
+ ALT="\begin{lstlisting}
+Output:Now main sleeping... press ctrl+c to exit
+shut down hook task completed..
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node323.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node308.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node321.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1932"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node323.html">Performing single task by</A>
+<B> Up:</B> <A
+ HREF="node308.html">How to create thread</A>
+<B> Previous:</B> <A
+ HREF="node321.html">ThreadGroup in Java</A>
+ &nbsp; <B>  <A ID="tex2html1933"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>

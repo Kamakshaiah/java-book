@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Java Reader/Writer</TITLE>
+<META NAME="description" CONTENT="Java Reader/Writer">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="previous" HREF="node162.html">
+<LINK REL="next" HREF="node168.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node168.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node166.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1285"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node168.html">Methods of Reader</A>
+<B> Up:</B> <A
+ HREF="node29.html">Data types &amp; Structures</A>
+<B> Previous:</B> <A
+ HREF="node166.html">Methods of OutputStream</A>
+ &nbsp; <B>  <A ID="tex2html1286"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION005140000000000000000">
+Java Reader/Writer</A>
+</H1>
+
+<P>
+The Reader class of the java.io package is an abstract superclass that represents a stream of characters. Since Reader is an abstract class, it is not useful by itself. However, its subclasses can be used to read data. In order to use the functionality of Reader, we can use its subclasses. Some of them are:
+
+<P>
+
+<OL>
+<LI>BufferedReader
+</LI>
+<LI>InputStreamReader
+</LI>
+<LI>FileReader
+</LI>
+<LI>StringReader
+</LI>
+</OL>
+
+<P>
+In order to create a Reader, we must import the <SPAN  CLASS="texttt">java.io.Reader</SPAN> package first. Once we import the package, here is how we can create the reader.
+
+<P>
+<BR>
+<IMG STYLE=""
+ SRC="img310.svg"
+ ALT="\begin{lstlisting}
+// Creates a Reader
+Reader input = new FileReader();
+\end{lstlisting}">
+<BR> 
+
+<P>
+Here, we have created a reader using the <SPAN  CLASS="texttt">FileReader</SPAN> class. It is because <SPAN  CLASS="textit">Reader</SPAN> is an abstract class. Hence we cannot create an object of Reader.
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html1287"
+  HREF="node168.html">Methods of Reader</A>
+<LI><A ID="tex2html1288"
+  HREF="node169.html">Java Writer Class</A>
+<UL>
+<LI><A ID="tex2html1289"
+  HREF="node170.html">Methods of Writer</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<BR><HR>
+
+</BODY>
+</HTML>

@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+
+<!--Converted with LaTeX2HTML 2019.2 (Released June 5, 2019) -->
+<HTML lang="EN">
+<HEAD>
+<TITLE>Packages</TITLE>
+<META NAME="description" CONTENT="Packages">
+<META NAME="keywords" CONTENT="Java_Book">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<META NAME="Generator" CONTENT="LaTeX2HTML v2019.2">
+
+<LINK REL="STYLESHEET" HREF="Java_Book.css">
+
+<LINK REL="next" HREF="node255.html">
+<LINK REL="previous" HREF="node251.html">
+<LINK REL="next" HREF="node253.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A
+ HREF="node253.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node192.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node251.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1660"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node253.html">Subpackage in java</A>
+<B> Up:</B> <A
+ HREF="node192.html">Object-Oriented Programming</A>
+<B> Previous:</B> <A
+ HREF="node251.html">Modules</A>
+ &nbsp; <B>  <A ID="tex2html1661"
+  HREF="node2.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A ID="SECTION007110000000000000000">
+Packages</A>
+</H1><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">A java package is a group of similar types of classes, interfaces and sub-packages. Package in java can be categorized in two form, built-in package and user-defined package. There are many built-in packages such as <SPAN  CLASS="textit">java, lang, awt, javax, swing, net, io, util, sql </SPAN>etc. Here, we will have the detailed learning of creating and using user-defined packages.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Advantage of Java Package:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+
+<OL>
+<LI>Java package is used to categorize the classes and interfaces so that they can be easily maintained.
+</LI>
+<LI>Java package provides access protection.
+</LI>
+<LI>Java package removes naming collision.
+</LI>
+</OL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The package keyword is used to create a package in java.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img465.svg"
+ ALT="\begin{lstlisting}
+//save as Simple.java
+package mypack;
+public class Simple{ ...
+... args[]){
+System.out.println(''Welcome to package'');
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">If you are not using any IDE, you need to follow the syntax given below:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img466.svg"
+ ALT="\begin{lstlisting}
+javac -d directory javafilename
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">For example
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img467.svg"
+ ALT="\begin{lstlisting}
+javac -d . Simple.java
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The <SPAN  CLASS="textit">-d</SPAN> switch specifies the destination where to put the generated class file. You can use any directory name like <SPAN  CLASS="textit">/home</SPAN> (in case of Linux), <SPAN  CLASS="textit">d:/abc</SPAN> (in case of windows) etc. If you want to keep the package within the same directory, you can use . (dot). You need to use fully qualified name e.g. <SPAN  CLASS="texttt">mypack.Simple</SPAN> etc to run the class.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"><SPAN  CLASS="textit">To Compile</SPAN>: <SPAN  CLASS="texttt">javac -d . Simple.java</SPAN> 
+<BR><SPAN  CLASS="textit">To Run</SPAN>: <SPAN  CLASS="texttt">java mypack.Simple</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">This will make <SPAN  CLASS="texttt">Welcome to package</SPAN> output. The <SPAN  CLASS="textit">-d</SPAN> is a switch that tells the compiler where to put the class file i.e. it represents destination. The . represents the current folder. There are three ways to access the package from outside the package.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+
+<OL>
+<LI><SPAN  CLASS="textit">import package.*;</SPAN>
+</LI>
+<LI><SPAN  CLASS="textit">import package.classname;</SPAN>
+</LI>
+<LI><SPAN  CLASS="textit">fully qualified name.</SPAN>
+</LI>
+</OL><SPAN CLASS="SPAN">
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">If you use <SPAN  CLASS="textit">package.*</SPAN> then all the classes and interfaces of this package will be accessible but not subpackages. The import keyword is used to make the classes and interface of another package accessible to the current package. The following code snippet serves as an example of package that import the <SPAN  CLASS="textit">packagename.*</SPAN>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img468.svg"
+ ALT="\begin{lstlisting}
+//save by A.java
+package pack;
+public class A{
+public voi...
+...id main(String args[]){
+A obj = new A();
+obj.msg();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">The estimated output will be <SPAN  CLASS="texttt">Hello</SPAN>. If you import <SPAN  CLASS="textit">package.classname</SPAN> then only declared class of this package will be accessible.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Example:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img469.svg"
+ ALT="\begin{lstlisting}
+//save by A.java
+\par
+package pack;
+public class A{
+publi...
+...id main(String args[]){
+A obj = new A();
+obj.msg();
+}
+}
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Output
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img470.svg"
+ ALT="\begin{lstlisting}
+Hello
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">If you use fully qualified name then only declared class of this package will be accessible. Now there is no need to import. But you need to use fully qualified name every time when you are accessing the class or interface. It is generally used when two packages have same class name e.g. java.util and java.sql packages contain Date class.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">Example:
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img471.svg"
+ ALT="\begin{lstlisting}
+//save by A.java
+package pack;
+public class A{
+public voi...
+... new pack.A();//using fully qualified name
+obj.msg();
+}
+}
+\end{lstlisting}">
+<BR>
+Output
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">
+<BR>
+<IMG STYLE=""
+ SRC="img470.svg"
+ ALT="\begin{lstlisting}
+Hello
+\end{lstlisting}">
+<BR>
+</SPAN>
+<P>
+<SPAN CLASS="SPAN">If you import a package, all the classes and interface of that package will be imported excluding the classes and interfaces of the subpackages. Hence, you need to import the subpackage as well.
+</SPAN>
+<P>
+<SPAN CLASS="SPAN"></SPAN>
+<BR><HR>
+<!--Table of Child-Links-->
+<A ID="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL CLASS="ChildLinks">
+<LI><A ID="tex2html1662"
+  HREF="node253.html">Subpackage in java</A>
+<UL>
+<LI><A ID="tex2html1663"
+  HREF="node254.html">Example of Subpackage</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A
+ HREF="node253.html">
+<IMG WIDTH="37" HEIGHT="24" ALT="next" SRC="next.png"></A> 
+<A
+ HREF="node192.html">
+<IMG WIDTH="26" HEIGHT="24" ALT="up" SRC="up.png"></A> 
+<A
+ HREF="node251.html">
+<IMG WIDTH="63" HEIGHT="24" ALT="previous" SRC="prev.png"></A> 
+<A ID="tex2html1660"
+  HREF="node2.html">
+<IMG WIDTH="65" HEIGHT="24" ALT="contents" SRC="contents.png"></A>  
+<BR>
+<B> Next:</B> <A
+ HREF="node253.html">Subpackage in java</A>
+<B> Up:</B> <A
+ HREF="node192.html">Object-Oriented Programming</A>
+<B> Previous:</B> <A
+ HREF="node251.html">Modules</A>
+ &nbsp; <B>  <A ID="tex2html1661"
+  HREF="node2.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+
+</BODY>
+</HTML>
